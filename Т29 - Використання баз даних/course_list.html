@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+
+	<title>Список студентів курсу</title>
+	<body>
+		<h2 align=center>Курс "{0}"</h2>		
+		<h3 align=center>Список студентів</h3>
+		<form method=POST action="/course">
+			<table align=center>
+				{1}
+				<tr>
+					<td>
+						<input type=submit value="Назад">
+					</td>
+			<table>
+			<input type=hidden name=sid value="{2}">
+		</form>
+	</body>
+</html>

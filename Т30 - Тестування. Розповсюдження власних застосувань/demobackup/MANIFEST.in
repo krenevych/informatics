@@ -1,0 +1,5 @@
+# MANIFEST.in
+include *.txt
+recursive-include examples *
+recursive-include doc *
+recursive-include demobackup *.txt

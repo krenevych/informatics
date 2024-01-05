@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+
+	<title>Проходження тестів. Питання</title>
+	<body>
+		<h2 align=center>Питання:</h2>
+			<!-- Вставити текст питання -->
+		<p align=center><font size="4"><b>{0}</b></font></p>
+		<form method=POST action="/question">
+			<table align=center>
+			<!-- Вставити відповіді -->
+			{1}
+				<tr>
+					<td colspan=2 align=right>
+						<input type=submit value="Далі">
+					</td>
+			<table>
+			<!-- Вставити користувача та передати номер питання -->
+			<input type=hidden name=sid value="{2}">
+		</form>
+	</body>
+</html>

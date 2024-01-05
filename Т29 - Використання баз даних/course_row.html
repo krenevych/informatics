@@ -1,0 +1,29 @@
+<!-- Один рядок таблиці курсів. Додається до 4 кнопок з діями над курсом -->
+<tr>
+        <td>
+                <a href="/course/view?courseid={0}&sid={2}"> {1} </a>
+        </td>
+        <td align=left> 
+			<form method=POST action="/course/{3}?courseid={0}">
+				{4}
+				<input type=hidden name=sid value="{2}">
+			</form>
+        </td>
+		<td align=left>
+			<form method=POST action="/course/{5}?courseid={0}">
+				{6}
+				<input type=hidden name=sid value="{2}">
+			</form>
+        </td>
+        <td align=left> 
+			<form method=POST action="/course/{7}?courseid={0}">
+				{8}
+				<input type=hidden name=sid value="{2}">
+			</form>
+        </td>
+        <td align=left> 
+			<form method=POST action="/course/{9}?courseid={0}">
+				{10}
+				<input type=hidden name=sid value="{2}">
+			</form>
+        </td>

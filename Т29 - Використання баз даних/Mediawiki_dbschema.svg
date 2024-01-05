@@ -1,0 +1,652 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg xmlns='http://www.w3.org/2000/svg'   width='2041' height='1287' viewbox='0 0 2041 1287' style='background:url(#bgPattern)'>
+<style type='text/css'>
+  text             { fill:black; font-family: Arial; font-size:11px; }
+  path             { fill: none; stroke: #333333; stroke-width: 1.2px; }
+  rect             { fill:#faf9f5; }
+</style>
+<defs>
+  <radialGradient id='bgGradient' r='.5'>
+      <stop stop-color='white' offset='0' />
+      <stop stop-color='#fdf9d5' offset='1' />
+  </radialGradient>
+
+  <radialGradient id='legendGradient' fx='5%' fy='5%' r='75%' spreadMethod='pad'>
+          <stop offset='0%' stop-color='#6985ff' stop-opacity='1'/> 
+          <stop offset='100%' stop-color='#1e2a5f' stop-opacity='1' /> 
+   </radialGradient>
+
+  <pattern id='pk' patternUnits='userSpaceOnUse' x='0' y='0' width='13' height='13' viewBox='0 0 13 13' >
+      <path d='M 4.3,5.2 C 4.7589427,3.5027713 5.480857,3.0904285 7.1,2.9 C 8.5972287,2.9465999 9.6725431,3.3904285 9.9,5.2 C 9.8506288,6.8438286 8.6876572,6.7302282 8.0876572,7.7302282 C 8.0876572,8.9302282 8.4083139,10.810829 8.6438286,12.019143 C 7.8355147,12.0466 6.5697718,12.043829 6.038286,12.021914 C 6.168258,11.156171 6.0848859,9.1397997 6.2848859,7.7397997 C 5.7848859,6.2397997 4.4342571,7.1972287 4.3,5 L 4.3,5.2 z'               style='fill:#c39802;stroke:none;' />
+  </pattern>   <pattern id='idx' patternUnits='userSpaceOnUse' x='0' y='0' width='13' height='13' viewBox='0 0 13 13' >
+      <path d='M 4.2,6 C 4.7740568,5.9876572 7.7204006,6 8.3753144,5.9753144 C 8.7302282,6.4685142 9.819143,7.6314858 10.187657,8.2123428 C 9.738286,8.7302282 9.119143,9.5246856 8.3259432,10.312343 C 7.5642292,10.256171 5.061714,10.268514 4.219143,10.2 L 4.2,6 z'              style='fill:#c39802;stroke:none;' />
+  </pattern>   <marker id='arrow' viewBox='0 0 6 6' refX='0' refY='3' markerUnits='strokeWidth' markerWidth='6' markerHeight='6' orient='auto'>
+    <path d='M 0,0 L 6, 3 L 0,6 z' style='fill:black' />
+  </marker>
+  <marker id='foot' viewBox='0 0 6 6' refX='6' refY='3' markerUnits='strokeWidth' markerWidth='6' markerHeight='6' orient='auto'>
+    <path d='M 0,3 L 6, 3 z' />
+  </marker>
+  <linearGradient id='grTableHeader' x1='0' x2='0' y1='0' y2='1'>
+	   <stop offset='0%' stop-color='#dae3fa' />
+    <stop offset='50%' stop-color='#b0badd' />
+	   <stop offset='100%' stop-color='#c2d8ee' />
+  </linearGradient>
+<filter id='dropShadow'  filterUnits='objectBoundingBox' x='-1.2' y='-1.2' width='6' height='6'>
+  <feGaussianBlur in='SourceAlpha' stdDeviation='4' />
+  <feComponentTransfer result='shadow'>
+     <feFuncA type='linear' slope='.9' intercept='0' />
+  </feComponentTransfer>
+  <feComposite in2='shadow' in='SourceGraphic'/>
+</filter></defs>
+
+<rect x='0' y='0' width='100%' height='100%' style='fill:#fdf9d5' />
+<ellipse cx='0' cy='0' rx='40%' ry='20%' style='fill:url(#bgGradient)' />
+<rect x='10' y='10' width='240' height='90' rx='6' ry='6' style='fill:url(#legendGradient);filter:url(#dropShadow);' />
+<text x='15' y='20' style='fill: white' >
+    <tspan x='15' dx='0' dy='13' style='font-weight: bold;'>'Media Wiki' database schema</tspan>
+    <tspan x='15' dx='0' dy='20' style='font-style: italic;'>Move the mouse cursor over the table header</tspan>
+    <tspan x='15' dx='0' dy='13' style='font-style: italic;'>and columns to view the comments</tspan>
+    <tspan x='70' dx='0' dy='20'>generated using DbSchema</tspan>
+</text>
+<rect x='40' y='136' width='661' height='677' rx='7' ry='7' class='layout' style='fill:#fff9c6; opacity:0.5; stroke:#70706f; stroke-width:0.5;'/>
+<text x='40' y='136' style='fill:#555555' >
+<tspan x='40' dx='13' dy='13' > Article text and association information </tspan>
+</text>
+<rect x='1379' y='19' width='596' height='430' rx='7' ry='7' class='layout' style='fill:#ffffcc; opacity:0.5; stroke:#70706f; stroke-width:0.5;'/>
+<text x='1379' y='19' style='fill:#555555' >
+<tspan x='1379' dx='13' dy='13' > Caching tables </tspan>
+</text>
+<rect x='1379' y='552' width='635' height='378' rx='7' ry='7' class='layout' style='fill:#ccffcc; opacity:0.5; stroke:#70706f; stroke-width:0.5;'/>
+<text x='1379' y='552' style='fill:#555555' >
+<tspan x='1379' dx='13' dy='13' > Images and Media </tspan>
+</text>
+<rect x='833' y='656' width='479' height='261' rx='7' ry='7' class='layout' style='fill:#ccccff; opacity:0.5; stroke:#70706f; stroke-width:0.5;'/>
+<text x='833' y='656' style='fill:#555555' >
+<tspan x='833' dx='13' dy='13' > Links </tspan>
+</text>
+<rect x='911' y='214' width='323' height='352' rx='7' ry='7' class='layout' style='fill:#fce8b5; opacity:0.5; stroke:#70706f; stroke-width:0.5;'/>
+<text x='911' y='214' style='fill:#555555' >
+<tspan x='911' dx='13' dy='13' > Miscelaus </tspan>
+</text>
+<rect x='833' y='994' width='505' height='222' rx='7' ry='7' class='layout' style='fill:#e6e2f9; opacity:0.5; stroke:#70706f; stroke-width:0.5;'/>
+<text x='833' y='994' style='fill:#555555' >
+<tspan x='833' dx='13' dy='13' > Statistics and Settings </tspan>
+</text>
+<rect x='27' y='877' width='765' height='391' rx='7' ry='7' class='layout' style='fill:#cee9ee; opacity:0.5; stroke:#70706f; stroke-width:0.5;'/>
+<text x='27' y='877' style='fill:#555555' >
+<tspan x='27' dx='13' dy='13' > User Accounts, Privileges and Watchlist </tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)' marker-end='url(#arrow)'   d='M 182 260 L 344,260 Q 351,260 351,266 L 351,916 Q 351,923 357,923 L 468,923' />
+<rect x='65' y='176' width='117' height='195' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='65' y='176' width='117' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='65' y='182' >
+  <tspan x='65' dx='13' dy='6' title='Stores information on deleted articles. The articles may be restored. 
+The content of the article remains in the table TEXT.
+The deletion time is logged in table LOGGING.' >ARCHIVE</tspan>
+</text>
+    <rect x='65' y='208' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='65' y='195'>
+    <tspan x='78' dx='0' dy='13'  title='NUMBER(22) not null' >AR_NAMESPACE</tspan>
+    <tspan x='78' dx='0' dy='13'  title='VARCHAR2(255) not null' >AR_TITLE</tspan>
+    <tspan x='78' dx='0' dy='13' style='fill:#646464' title='CLOB' >AR_TEXT</tspan>
+    <tspan x='78' dx='0' dy='13' style='fill:#646464' title='CLOB' >AR_COMMENT</tspan>
+    <tspan x='78' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >AR_USER</tspan>
+    <tspan x='78' dx='0' dy='13'  title='CLOB not null' >AR_USER_TEXT</tspan>
+    <tspan x='78' dx='0' dy='13'  title='TIMESTAMP(6) WITH TIME ZONE(13,6) not null' >AR_TIMESTAMP</tspan>
+    <tspan x='78' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >AR_MINOR_EDIT</tspan>
+    <tspan x='78' dx='0' dy='13' style='fill:#646464' title='CLOB' >AR_FLAGS</tspan>
+    <tspan x='78' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >AR_REV_ID</tspan>
+    <tspan x='78' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >AR_TEXT_ID</tspan>
+    <tspan x='78' dx='0' dy='13'  title='NUMBER(22) not null default  0 ' >AR_DELETED</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)' marker-end='url(#arrow)'   d='M 1001 702 L 981,702 Q 975,702 975,695 L 975,643 Q 975,637 968,637 L 520,637' />
+<rect x='1014' y='670' width='117' height='91' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1014' y='670' width='117' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1014' y='676' >
+  <tspan x='1014' dx='13' dy='6' title='Store entries on a page of the type [[category:abc]], which places the page
+into the category  abc  ( for which an associated page may or may not exist ).' >CATEGORYLINKS</tspan>
+</text>
+    <rect x='1014' y='702' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+    <rect x='1014' y='715' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='1014' y='689'>
+    <tspan x='1027' dx='0' dy='13'  title='NUMBER(22) not null' >CL_FROM</tspan>
+    <tspan x='1027' dx='0' dy='13'  title='VARCHAR2(255) not null' >CL_TO</tspan>
+    <tspan x='1027' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(86)' >CL_SORTKEY</tspan>
+    <tspan x='1027' dx='0' dy='13'  title='TIMESTAMP(6) WITH TIME ZONE(13,6) not null' >CL_TIMESTAMP</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 1105 845 L 994,845 Q 988,845 988,838 L 988,708 Q 988,702 981,702 L 975,702' />
+<rect x='1118' y='813' width='104' height='78' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1118' y='813' width='104' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1118' y='819' >
+  <tspan x='1118' dx='13' dy='6' title='Stores and tracks external links.' >EXTERNALLINKS</tspan>
+</text>
+<text x='1118' y='832'>
+    <tspan x='1131' dx='0' dy='13'  title='NUMBER(22) not null' >EL_FROM</tspan>
+    <tspan x='1131' dx='0' dy='13'  title='VARCHAR2(2048) not null' >EL_TO</tspan>
+    <tspan x='1131' dx='0' dy='13'  title='CLOB not null' >EL_INDEX</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)' marker-end='url(#arrow)'   d='M 1820 819 L 1748,819 Q 1742,819 1742,825 L 1742,916 Q 1742,923 1735,923 L 676,923' />
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 1820 663 L 1813,663 Q 1807,663 1807,669 L 1807,812 Q 1807,819 1800,819 L 1794,819' />
+<rect x='1833' y='566' width='169' height='312' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1833' y='566' width='169' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1833' y='572' >
+  <tspan x='1833' dx='13' dy='6' title='The table stores all the media that has been deleted, similar to the ARCHIVE table s job for text.
+This is the table that makes image undeletion possible.' >FILEARCHIVE</tspan>
+</text>
+    <rect x='1833' y='585' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+    <rect x='1833' y='637' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='1833' y='585'>
+    <tspan x='1846' dx='0' dy='13'  title='NUMBER(22) not null' >FA_ID</tspan>
+    <tspan x='1846' dx='0' dy='13'  title='VARCHAR2(255) not null' >FA_NAME</tspan>
+    <tspan x='1846' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(255)' >FA_ARCHIVE_NAME</tspan>
+    <tspan x='1846' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(16)' >FA_STORAGE_GROUP</tspan>
+    <tspan x='1846' dx='0' dy='13' style='fill:#646464' title='CHAR(64)' >FA_STORAGE_KEY</tspan>
+    <tspan x='1846' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >FA_DELETED_USER</tspan>
+    <tspan x='1846' dx='0' dy='13'  title='TIMESTAMP(6) WITH TIME ZONE(13,6) not null' >FA_DELETED_TIMESTAMP</tspan>
+    <tspan x='1846' dx='0' dy='13' style='fill:#646464' title='CLOB' >FA_DELETED_REASON</tspan>
+    <tspan x='1846' dx='0' dy='13'  title='NUMBER(22) not null' >FA_SIZE</tspan>
+    <tspan x='1846' dx='0' dy='13'  title='NUMBER(22) not null' >FA_WIDTH</tspan>
+    <tspan x='1846' dx='0' dy='13'  title='NUMBER(22) not null' >FA_HEIGHT</tspan>
+    <tspan x='1846' dx='0' dy='13' style='fill:#646464' title='CLOB' >FA_METADATA</tspan>
+    <tspan x='1846' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >FA_BITS</tspan>
+    <tspan x='1846' dx='0' dy='13' style='fill:#646464' title='CLOB' >FA_MEDIA_TYPE</tspan>
+    <tspan x='1846' dx='0' dy='13' style='fill:#646464' title='CLOB default  unknown ' >FA_MAJOR_MIME</tspan>
+    <tspan x='1846' dx='0' dy='13' style='fill:#646464' title='CLOB default  unknown ' >FA_MINOR_MIME</tspan>
+    <tspan x='1846' dx='0' dy='13'  title='CLOB not null' >FA_DESCRIPTION</tspan>
+    <tspan x='1846' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >FA_USER</tspan>
+    <tspan x='1846' dx='0' dy='13'  title='CLOB not null' >FA_USER_TEXT</tspan>
+    <tspan x='1846' dx='0' dy='13' style='fill:#646464' title='TIMESTAMP(6) WITH TIME ZONE(13,6)' >FA_TIMESTAMP</tspan>
+    <tspan x='1846' dx='0' dy='13'  title='NUMBER(22) not null default  0 ' >FA_DELETED</tspan>
+</text>
+<rect x='1235' y='1099' width='91' height='52' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1235' y='1099' width='91' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1235' y='1105' >
+  <tspan x='1235' dx='13' dy='6' title='This is a temporary buffer for storage of page view information. 
+Stores the page_id value of any pages that where visited in teh hc_id field.
+The PAGE table s page_counter field is periodically increased based on this.' >HITCOUNTER</tspan>
+</text>
+<text x='1235' y='1118'>
+    <tspan x='1248' dx='0' dy='13'  title='NUMBER(22) not null' >HC_ID</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 1378 741 L 1371,741 Q 1365,741 1365,747 L 1365,916 Q 1365,923 1358,923 L 1352,923' />
+<rect x='1391' y='579' width='130' height='208' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1391' y='579' width='130' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1391' y='585' >
+  <tspan x='1391' dx='13' dy='6' title='Describes images and other uploaded files. 
+However, the image description pages are stored like other pages.' >IMAGE</tspan>
+</text>
+    <rect x='1391' y='598' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+<text x='1391' y='598'>
+    <tspan x='1404' dx='0' dy='13'  title='VARCHAR2(255) not null' >IMG_NAME</tspan>
+    <tspan x='1404' dx='0' dy='13'  title='NUMBER(22) not null' >IMG_SIZE</tspan>
+    <tspan x='1404' dx='0' dy='13'  title='NUMBER(22) not null' >IMG_WIDTH</tspan>
+    <tspan x='1404' dx='0' dy='13'  title='NUMBER(22) not null' >IMG_HEIGHT</tspan>
+    <tspan x='1404' dx='0' dy='13' style='fill:#646464' title='CLOB' >IMG_METADATA</tspan>
+    <tspan x='1404' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >IMG_BITS</tspan>
+    <tspan x='1404' dx='0' dy='13' style='fill:#646464' title='CLOB' >IMG_MEDIA_TYPE</tspan>
+    <tspan x='1404' dx='0' dy='13' style='fill:#646464' title='CLOB default  unknown ' >IMG_MAJOR_MIME</tspan>
+    <tspan x='1404' dx='0' dy='13' style='fill:#646464' title='CLOB default  unknown ' >IMG_MINOR_MIME</tspan>
+    <tspan x='1404' dx='0' dy='13' style='fill:#646464' title='CLOB' >IMG_DESCRIPTION</tspan>
+    <tspan x='1404' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >IMG_USER</tspan>
+    <tspan x='1404' dx='0' dy='13'  title='CLOB not null' >IMG_USER_TEXT</tspan>
+    <tspan x='1404' dx='0' dy='13' style='fill:#646464' title='TIMESTAMP(6) WITH TIME ZONE(13,6)' >IMG_TIMESTAMP</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 1404 871 L 1241,871 Q 1235,871 1235,864 L 1235,799 Q 1235,793 1228,793 L 994,793 Q 988,793 988,786 L 988,780' />
+<rect x='1417' y='839' width='91' height='65' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1417' y='839' width='91' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1417' y='845' >
+  <tspan x='1417' dx='13' dy='6' title='Stores all the links to images. 
+This is good for a variety of functions, from link caching in the output functions to the
+ what links here  page.' >IMAGELINKS</tspan>
+</text>
+    <rect x='1417' y='858' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='1417' y='858'>
+    <tspan x='1430' dx='0' dy='13'  title='NUMBER(22) not null' >IL_FROM</tspan>
+    <tspan x='1430' dx='0' dy='13'  title='VARCHAR2(255) not null' >IL_TO</tspan>
+</text>
+<rect x='1131' y='254' width='91' height='91' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1131' y='254' width='91' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1131' y='260' >
+  <tspan x='1131' dx='13' dy='6' title='Stores interwiki prefixes with their targets.' >INTERWIKI</tspan>
+</text>
+<text x='1131' y='273'>
+    <tspan x='1144' dx='0' dy='13'  title='VARCHAR2(32) not null' >IW_PREFIX</tspan>
+    <tspan x='1144' dx='0' dy='13'  title='VARCHAR2(127) not null' >IW_URL</tspan>
+    <tspan x='1144' dx='0' dy='13'  title='CHAR(1) not null' >IW_LOCAL</tspan>
+    <tspan x='1144' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >IW_TRANS</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 208 975 L 344,975 Q 351,975 351,968 L 351,929 Q 351,923 357,923 L 364,923' />
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 208 962 L 214,962 Q 221,962 221,968 L 221,968 Q 221,975 227,975 L 234,975' />
+<rect x='39' y='904' width='169' height='221' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='39' y='904' width='169' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='39' y='910' >
+  <tspan x='39' dx='13' dy='6' title='Stores details of IP addresses and users who have been blocked from editing.' >IPBLOCKS</tspan>
+</text>
+    <rect x='39' y='923' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+    <rect x='39' y='1079' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='39' y='923'>
+    <tspan x='52' dx='0' dy='13'  title='NUMBER(22) not null' >IPB_ID</tspan>
+    <tspan x='52' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(255)' >IPB_ADDRESS</tspan>
+    <tspan x='52' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >IPB_USER</tspan>
+    <tspan x='52' dx='0' dy='13'  title='NUMBER(22) not null' >IPB_BY</tspan>
+    <tspan x='52' dx='0' dy='13'  title='VARCHAR2(255) not null' >IPB_REASON</tspan>
+    <tspan x='52' dx='0' dy='13'  title='TIMESTAMP(6) WITH TIME ZONE(13,6) not null' >IPB_TIMESTAMP</tspan>
+    <tspan x='52' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >IPB_AUTO</tspan>
+    <tspan x='52' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >IPB_ANON_ONLY</tspan>
+    <tspan x='52' dx='0' dy='13'  title='CHAR(1) not null default  1 ' >IPB_CREATE_ACCOUNT</tspan>
+    <tspan x='52' dx='0' dy='13'  title='CHAR(1) not null default  1 ' >IPB_ENABLE_AUTOBLOCK</tspan>
+    <tspan x='52' dx='0' dy='13'  title='TIMESTAMP(6) WITH TIME ZONE(13,6) not null' >IPB_EXPIRY</tspan>
+    <tspan x='52' dx='0' dy='13' style='fill:#646464' title='CHAR(8)' >IPB_RANGE_START</tspan>
+    <tspan x='52' dx='0' dy='13' style='fill:#646464' title='CHAR(8)' >IPB_RANGE_END</tspan>
+    <tspan x='52' dx='0' dy='13'  title='NUMBER(22) not null default  0 ' >IPB_DELETED</tspan>
+</text>
+<rect x='923' y='228' width='130' height='104' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='923' y='228' width='130' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='923' y='234' >
+  <tspan x='923' dx='13' dy='6' title='JOBS performed by parallel apache threads or a command-line daemon.' >JOB</tspan>
+</text>
+    <rect x='923' y='247' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+    <rect x='923' y='273' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+    <rect x='923' y='286' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='923' y='247'>
+    <tspan x='936' dx='0' dy='13'  title='NUMBER(22) not null' >JOB_ID</tspan>
+    <tspan x='936' dx='0' dy='13'  title='VARCHAR2(255) not null' >JOB_CMD</tspan>
+    <tspan x='936' dx='0' dy='13'  title='NUMBER(22) not null' >JOB_NAMESPACE</tspan>
+    <tspan x='936' dx='0' dy='13'  title='VARCHAR2(255) not null' >JOB_TITLE</tspan>
+    <tspan x='936' dx='0' dy='13'  title='CLOB not null' >JOB_PARAMS</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 1196 702 L 1189,702 Q 1183,702 1183,708 L 1183,786 Q 1183,793 1176,793 L 1170,793' />
+<rect x='1209' y='670' width='91' height='78' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1209' y='670' width='91' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1209' y='676' >
+  <tspan x='1209' dx='13' dy='6' title='Tracks interlanguage links.' >LANGLINKS</tspan>
+</text>
+    <rect x='1209' y='702' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+    <rect x='1209' y='715' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='1209' y='689'>
+    <tspan x='1222' dx='0' dy='13'  title='NUMBER(22) not null' >LL_FROM</tspan>
+    <tspan x='1222' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(10)' >LL_LANG</tspan>
+    <tspan x='1222' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(255)' >LL_TITLE</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 832 1092 L 825,1092 Q 819,1092 819,1085 L 819,929 Q 819,923 812,923 L 806,923' />
+<rect x='845' y='1008' width='130' height='169' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='845' y='1008' width='130' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='845' y='1014' >
+  <tspan x='845' dx='13' dy='6' title='The content of Logging is basically what you see on the Special:Log page' >LOGGING</tspan>
+</text>
+    <rect x='845' y='1027' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+    <rect x='845' y='1105' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='845' y='1027'>
+    <tspan x='858' dx='0' dy='13'  title='NUMBER(22) not null' >LOG_ID</tspan>
+    <tspan x='858' dx='0' dy='13'  title='VARCHAR2(10) not null' >LOG_TYPE</tspan>
+    <tspan x='858' dx='0' dy='13'  title='VARCHAR2(10) not null' >LOG_ACTION</tspan>
+    <tspan x='858' dx='0' dy='13'  title='TIMESTAMP(6) WITH TIME ZONE(13,6) not null' >LOG_TIMESTAMP</tspan>
+    <tspan x='858' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >LOG_USER</tspan>
+    <tspan x='858' dx='0' dy='13'  title='NUMBER(22) not null' >LOG_NAMESPACE</tspan>
+    <tspan x='858' dx='0' dy='13'  title='VARCHAR2(255) not null' >LOG_TITLE</tspan>
+    <tspan x='858' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(255)' >LOG_COMMENT</tspan>
+    <tspan x='858' dx='0' dy='13' style='fill:#646464' title='CLOB' >LOG_PARAMS</tspan>
+    <tspan x='858' dx='0' dy='13'  title='NUMBER(22) not null default  0 ' >LOG_DELETED</tspan>
+</text>
+<rect x='1755' y='176' width='208' height='104' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1755' y='176' width='208' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1755' y='182' >
+  <tspan x='1755' dx='13' dy='6' title='Table used by the math module to keep track of previously-rendered items.' >MATH</tspan>
+</text>
+<text x='1755' y='195'>
+    <tspan x='1768' dx='0' dy='13'  title='VARCHAR2(16) not null' >MATH_INPUTHASH</tspan>
+    <tspan x='1768' dx='0' dy='13'  title='VARCHAR2(16) not null' >MATH_OUTPUTHASH</tspan>
+    <tspan x='1768' dx='0' dy='13'  title='NUMBER(22) not null' >MATH_HTML_CONSERVATIVENESS</tspan>
+    <tspan x='1768' dx='0' dy='13' style='fill:#646464' title='CLOB' >MATH_HTML</tspan>
+    <tspan x='1768' dx='0' dy='13' style='fill:#646464' title='CLOB' >MATH_MATHML</tspan>
+</text>
+<rect x='481' y='891' width='195' height='234' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='481' y='891' width='195' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='481' y='897' >
+  <tspan x='481' dx='13' dy='6' title='Contains basic user account information.' >MWUSER</tspan>
+</text>
+    <rect x='481' y='910' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+<text x='481' y='910'>
+    <tspan x='494' dx='0' dy='13'  title='NUMBER(22) not null' >USER_ID</tspan>
+    <tspan x='494' dx='0' dy='13'  title='VARCHAR2(255) not null' >USER_NAME</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='CLOB' >USER_REAL_NAME</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='CLOB' >USER_PASSWORD</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='CLOB' >USER_NEWPASSWORD</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='TIMESTAMP(6) WITH TIME ZONE(13,6)' >USER_NEWPASS_TIME</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='CHAR(32)' >USER_TOKEN</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='CLOB' >USER_EMAIL</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='CHAR(32)' >USER_EMAIL_TOKEN</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='TIMESTAMP(6) WITH TIME ZONE(13,6)' >USER_EMAIL_TOKEN_EXPIRES</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='TIMESTAMP(6) WITH TIME ZONE(13,6)' >USER_EMAIL_AUTHENTICATED</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='CLOB' >USER_OPTIONS</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='TIMESTAMP(6) WITH TIME ZONE(13,6)' >USER_TOUCHED</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='TIMESTAMP(6) WITH TIME ZONE(13,6)' >USER_REGISTRATION</tspan>
+    <tspan x='494' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >USER_EDITCOUNT</tspan>
+</text>
+<rect x='1391' y='46' width='104' height='78' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1391' y='46' width='104' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1391' y='52' >
+  <tspan x='1391' dx='13' dy='6' title='Table used for a few generic cache operations if not using Memcached.' >OBJECTCACHE</tspan>
+</text>
+<text x='1391' y='65'>
+    <tspan x='1404' dx='0' dy='13' style='fill:#646464' title='CHAR(255)' >KEYNAME</tspan>
+    <tspan x='1404' dx='0' dy='13' style='fill:#646464' title='BLOB' >VALUE</tspan>
+    <tspan x='1404' dx='0' dy='13'  title='TIMESTAMP(6) WITH TIME ZONE(13,6) not null' >EXPTIME</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)' marker-end='url(#arrow)'   d='M 1586 611 L 1521,611' />
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 1729 702 L 1800,702 Q 1807,702 1807,708 L 1807,715' />
+<rect x='1599' y='579' width='130' height='234' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1599' y='579' width='130' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1599' y='585' >
+  <tspan x='1599' dx='13' dy='6' title='Holds information about old revisions of images.
+It will be filled when one uploads a new version of image to the wiki.' >OLDIMAGE</tspan>
+</text>
+    <rect x='1599' y='611' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='1599' y='598'>
+    <tspan x='1612' dx='0' dy='13'  title='VARCHAR2(255) not null' >OI_NAME</tspan>
+    <tspan x='1612' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(255)' >OI_ARCHIVE_NAME</tspan>
+    <tspan x='1612' dx='0' dy='13'  title='NUMBER(22) not null' >OI_SIZE</tspan>
+    <tspan x='1612' dx='0' dy='13'  title='NUMBER(22) not null' >OI_WIDTH</tspan>
+    <tspan x='1612' dx='0' dy='13'  title='NUMBER(22) not null' >OI_HEIGHT</tspan>
+    <tspan x='1612' dx='0' dy='13'  title='NUMBER(22) not null' >OI_BITS</tspan>
+    <tspan x='1612' dx='0' dy='13' style='fill:#646464' title='CLOB' >OI_DESCRIPTION</tspan>
+    <tspan x='1612' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >OI_USER</tspan>
+    <tspan x='1612' dx='0' dy='13'  title='CLOB not null' >OI_USER_TEXT</tspan>
+    <tspan x='1612' dx='0' dy='13'  title='TIMESTAMP(6) WITH TIME ZONE(13,6) not null' >OI_TIMESTAMP</tspan>
+    <tspan x='1612' dx='0' dy='13' style='fill:#646464' title='CLOB' >OI_METADATA</tspan>
+    <tspan x='1612' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(10)' >OI_MEDIA_TYPE</tspan>
+    <tspan x='1612' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(11) default  unknown ' >OI_MAJOR_MIME</tspan>
+    <tspan x='1612' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(32) default  unknown ' >OI_MINOR_MIME</tspan>
+    <tspan x='1612' dx='0' dy='13'  title='NUMBER(22) not null default  0 ' >OI_DELETED</tspan>
+</text>
+<rect x='377' y='605' width='143' height='182' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='377' y='605' width='143' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='377' y='611' >
+  <tspan x='377' dx='13' dy='6' title='Core of the wiki: each page has an entry here which identified it by title and 
+contains some essential metadata. 
+The text of the page itself is stored in table TEXT.' >PAGE</tspan>
+</text>
+    <rect x='377' y='624' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+    <rect x='377' y='650' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='377' y='624'>
+    <tspan x='390' dx='0' dy='13'  title='NUMBER(22) not null' >PAGE_ID</tspan>
+    <tspan x='390' dx='0' dy='13'  title='NUMBER(22) not null' >PAGE_NAMESPACE</tspan>
+    <tspan x='390' dx='0' dy='13'  title='VARCHAR2(255) not null' >PAGE_TITLE</tspan>
+    <tspan x='390' dx='0' dy='13' style='fill:#646464' title='CLOB' >PAGE_RESTRICTIONS</tspan>
+    <tspan x='390' dx='0' dy='13'  title='NUMBER(22) not null default  0 ' >PAGE_COUNTER</tspan>
+    <tspan x='390' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >PAGE_IS_REDIRECT</tspan>
+    <tspan x='390' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >PAGE_IS_NEW</tspan>
+    <tspan x='390' dx='0' dy='13'  title='NUMBER(15,14) not null' >PAGE_RANDOM</tspan>
+    <tspan x='390' dx='0' dy='13' style='fill:#646464' title='TIMESTAMP(6) WITH TIME ZONE(13,6)' >PAGE_TOUCHED</tspan>
+    <tspan x='390' dx='0' dy='13'  title='NUMBER(22) not null' >PAGE_LATEST</tspan>
+    <tspan x='390' dx='0' dy='13'  title='NUMBER(22) not null' >PAGE_LEN</tspan>
+</text>
+<rect x='572' y='709' width='104' height='78' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='572' y='709' width='104' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='572' y='715' >
+  <tspan x='572' dx='13' dy='6' >PAGECONTENT</tspan>
+</text>
+    <rect x='572' y='728' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+<text x='572' y='728'>
+    <tspan x='585' dx='0' dy='13'  title='NUMBER(22) not null' >OLD_ID</tspan>
+    <tspan x='585' dx='0' dy='13' style='fill:#646464' title='CLOB' >OLD_TEXT</tspan>
+    <tspan x='585' dx='0' dy='13' style='fill:#646464' title='CLOB' >OLD_FLAGS</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 962 715 L 981,715 Q 988,715 988,708 L 988,702' />
+<rect x='845' y='683' width='117' height='78' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='845' y='683' width='117' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='845' y='689' >
+  <tspan x='845' dx='13' dy='6' title='PAGELINKS contains page-to-page hyperlinks within the wiki. 
+The target page may or may not exist, and due to renames and deletions
+may refer to different page records as time goes by.' >PAGELINKS</tspan>
+</text>
+    <rect x='845' y='715' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+    <rect x='845' y='728' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='845' y='702'>
+    <tspan x='858' dx='0' dy='13'  title='NUMBER(22) not null' >PL_FROM</tspan>
+    <tspan x='858' dx='0' dy='13'  title='NUMBER(22) not null' >PL_NAMESPACE</tspan>
+    <tspan x='858' dx='0' dy='13'  title='VARCHAR2(255) not null' >PL_TITLE</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)' marker-end='url(#arrow)'   d='M 273 689 L 331,689 Q 338,689 338,682 L 338,643 Q 338,637 344,637 L 364,637' />
+<rect x='143' y='657' width='130' height='130' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='143' y='657' width='130' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='143' y='663' >
+  <tspan x='143' dx='13' dy='6' >PAGE_RESTRICTIONS</tspan>
+</text>
+    <rect x='143' y='676' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+    <rect x='143' y='689' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+<text x='143' y='676'>
+    <tspan x='156' dx='0' dy='13'  title='NUMBER(22) not null' >PR_PAGE</tspan>
+    <tspan x='156' dx='0' dy='13'  title='VARCHAR2(255) not null' >PR_TYPE</tspan>
+    <tspan x='156' dx='0' dy='13'  title='NUMBER(22) not null' >PR_ID</tspan>
+    <tspan x='156' dx='0' dy='13'  title='VARCHAR2(255) not null' >PR_LEVEL</tspan>
+    <tspan x='156' dx='0' dy='13'  title='NUMBER(22) not null' >PR_CASCADE</tspan>
+    <tspan x='156' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >PR_USER</tspan>
+    <tspan x='156' dx='0' dy='13' style='fill:#646464' title='TIMESTAMP(6) WITH TIME ZONE(13,6)' >PR_EXPIRY</tspan>
+</text>
+<rect x='1547' y='33' width='117' height='91' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1547' y='33' width='117' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1547' y='39' >
+  <tspan x='1547' dx='13' dy='6' title='Used for caching expensive grouped queries.' >QUERYCACHE</tspan>
+</text>
+    <rect x='1547' y='65' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='1547' y='52'>
+    <tspan x='1560' dx='0' dy='13'  title='CHAR(32) not null' >QC_TYPE</tspan>
+    <tspan x='1560' dx='0' dy='13'  title='NUMBER(22) not null' >QC_VALUE</tspan>
+    <tspan x='1560' dx='0' dy='13'  title='NUMBER(22) not null' >QC_NAMESPACE</tspan>
+    <tspan x='1560' dx='0' dy='13'  title='CHAR(255) not null' >QC_TITLE</tspan>
+</text>
+<rect x='1547' y='176' width='156' height='117' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1547' y='176' width='156' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1547' y='182' >
+  <tspan x='1547' dx='13' dy='6' title='QUERYCACHETWO is used for caching expensive grouped 
+queries that need two links ( for example double-redirects ).' >QUERYCACHETWO</tspan>
+</text>
+    <rect x='1547' y='208' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+    <rect x='1547' y='221' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+    <rect x='1547' y='234' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+    <rect x='1547' y='247' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+    <rect x='1547' y='260' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='1547' y='195'>
+    <tspan x='1560' dx='0' dy='13'  title='CHAR(32) not null' >QCC_TYPE</tspan>
+    <tspan x='1560' dx='0' dy='13'  title='NUMBER(22) not null default  0 ' >QCC_VALUE</tspan>
+    <tspan x='1560' dx='0' dy='13'  title='NUMBER(22) not null default  0 ' >QCC_NAMESPACE</tspan>
+    <tspan x='1560' dx='0' dy='13'  title='CHAR(255) not null' >QCC_TITLE</tspan>
+    <tspan x='1560' dx='0' dy='13'  title='NUMBER(22) not null default  0 ' >QCC_NAMESPACETWO</tspan>
+    <tspan x='1560' dx='0' dy='13'  title='CHAR(255) not null' >QCC_TITLETWO</tspan>
+</text>
+<rect x='1755' y='59' width='130' height='65' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1755' y='59' width='130' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1755' y='65' >
+  <tspan x='1755' dx='13' dy='6' title='Contains details of updates to cached special pages.' >QUERYCACHE_INFO</tspan>
+</text>
+<text x='1755' y='78'>
+    <tspan x='1768' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(32)' >QCI_TYPE</tspan>
+    <tspan x='1768' dx='0' dy='13' style='fill:#646464' title='TIMESTAMP(6) WITH TIME ZONE(13,6)' >QCI_TIMESTAMP</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 689 221 L 695,221 Q 702,221 702,227 L 702,916 Q 702,923 695,923 L 689,923' />
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 689 325 L 708,325 Q 715,325 715,331 L 715,630 Q 715,637 708,637 L 702,637' />
+<rect x='546' y='150' width='143' height='377' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='546' y='150' width='143' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='546' y='156' >
+  <tspan x='546' dx='13' dy='6' title='Contains details of the latest modifications done to the wiki.
+Used to generate the recent changes pages, related changes pages, 
+watchlists, and the list of new pages.' >RECENTCHANGES</tspan>
+</text>
+    <rect x='546' y='169' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+    <rect x='546' y='234' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+    <rect x='546' y='247' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='546' y='169'>
+    <tspan x='559' dx='0' dy='13'  title='NUMBER(22) not null' >RC_ID</tspan>
+    <tspan x='559' dx='0' dy='13'  title='TIMESTAMP(6) WITH TIME ZONE(13,6) not null' >RC_TIMESTAMP</tspan>
+    <tspan x='559' dx='0' dy='13'  title='TIMESTAMP(6) WITH TIME ZONE(13,6) not null' >RC_CUR_TIME</tspan>
+    <tspan x='559' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >RC_USER</tspan>
+    <tspan x='559' dx='0' dy='13'  title='CLOB not null' >RC_USER_TEXT</tspan>
+    <tspan x='559' dx='0' dy='13'  title='NUMBER(22) not null' >RC_NAMESPACE</tspan>
+    <tspan x='559' dx='0' dy='13'  title='VARCHAR2(255) not null' >RC_TITLE</tspan>
+    <tspan x='559' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(255)' >RC_COMMENT</tspan>
+    <tspan x='559' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >RC_MINOR</tspan>
+    <tspan x='559' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >RC_BOT</tspan>
+    <tspan x='559' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >RC_NEW</tspan>
+    <tspan x='559' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >RC_CUR_ID</tspan>
+    <tspan x='559' dx='0' dy='13'  title='NUMBER(22) not null' >RC_THIS_OLDID</tspan>
+    <tspan x='559' dx='0' dy='13'  title='NUMBER(22) not null' >RC_LAST_OLDID</tspan>
+    <tspan x='559' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >RC_TYPE</tspan>
+    <tspan x='559' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >RC_MOVED_TO_NS</tspan>
+    <tspan x='559' dx='0' dy='13' style='fill:#646464' title='CLOB' >RC_MOVED_TO_TITLE</tspan>
+    <tspan x='559' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >RC_PATROLLED</tspan>
+    <tspan x='559' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(15)' >RC_IP</tspan>
+    <tspan x='559' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >RC_OLD_LEN</tspan>
+    <tspan x='559' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >RC_NEW_LEN</tspan>
+    <tspan x='559' dx='0' dy='13'  title='NUMBER(22) not null default  0 ' >RC_DELETED</tspan>
+    <tspan x='559' dx='0' dy='13'  title='NUMBER(22) not null default  0 ' >RC_LOGID</tspan>
+    <tspan x='559' dx='0' dy='13' style='fill:#646464' title='CLOB' >RC_LOG_TYPE</tspan>
+    <tspan x='559' dx='0' dy='13' style='fill:#646464' title='CLOB' >RC_LOG_ACTION</tspan>
+    <tspan x='559' dx='0' dy='13' style='fill:#646464' title='CLOB' >RC_PARAMS</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 260 585 L 279,585 Q 286,585 286,591 L 286,682 Q 286,689 292,689 L 299,689' />
+<rect x='143' y='553' width='117' height='78' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='143' y='553' width='117' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='143' y='559' >
+  <tspan x='143' dx='13' dy='6' title='Contains for each page that is currently a redirect 
+( i.e., not for old revisions which are redirects ) the id of the source page, 
+the target namespace number, and the target page title without namespace.' >REDIRECT</tspan>
+</text>
+    <rect x='143' y='572' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+    <rect x='143' y='598' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='143' y='572'>
+    <tspan x='156' dx='0' dy='13'  title='NUMBER(22) not null' >RD_FROM</tspan>
+    <tspan x='156' dx='0' dy='13'  title='NUMBER(22) not null' >RD_NAMESPACE</tspan>
+    <tspan x='156' dx='0' dy='13'  title='VARCHAR2(255) not null' >RD_TITLE</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 364 442 L 357,442 Q 351,442 351,448 L 351,455' />
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 364 403 L 292,403 Q 286,403 286,409 L 286,598' />
+<rect x='377' y='358' width='130' height='182' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='377' y='358' width='130' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='377' y='364' >
+  <tspan x='377' dx='13' dy='6' title='Holds metadata for every edit done to a page within the wiki.
+Every edit of a page creates a revision row, which holds 
+information such as the user who made the edit, the time at which 
+the edit was made, and a reference to the new wikitext in the TEXT table.' >REVISION</tspan>
+</text>
+    <rect x='377' y='377' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+<text x='377' y='377'>
+    <tspan x='390' dx='0' dy='13'  title='NUMBER(22) not null' >REV_ID</tspan>
+    <tspan x='390' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >REV_PAGE</tspan>
+    <tspan x='390' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >REV_TEXT_ID</tspan>
+    <tspan x='390' dx='0' dy='13' style='fill:#646464' title='CLOB' >REV_COMMENT</tspan>
+    <tspan x='390' dx='0' dy='13'  title='NUMBER(22) not null' >REV_USER</tspan>
+    <tspan x='390' dx='0' dy='13'  title='VARCHAR2(255) not null' >REV_USER_TEXT</tspan>
+    <tspan x='390' dx='0' dy='13'  title='TIMESTAMP(6) WITH TIME ZONE(13,6) not null' >REV_TIMESTAMP</tspan>
+    <tspan x='390' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >REV_MINOR_EDIT</tspan>
+    <tspan x='390' dx='0' dy='13'  title='CHAR(1) not null default  0 ' >REV_DELETED</tspan>
+    <tspan x='390' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >REV_LEN</tspan>
+    <tspan x='390' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >REV_PARENT_ID</tspan>
+</text>
+<rect x='52' y='436' width='104' height='78' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='52' y='436' width='104' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='52' y='442' >
+  <tspan x='52' dx='13' dy='6' title='The SEARCHINDEX table is used to provide full text searches. 
+Those can only be done with the MyISAM table type and the TEXT table uses
+the InnoDb type to improve concurrency, so a copy iis required.' >SEARCHINDEX</tspan>
+</text>
+<text x='52' y='455'>
+    <tspan x='65' dx='0' dy='13'  title='NUMBER(22) not null' >SI_PAGE</tspan>
+    <tspan x='65' dx='0' dy='13'  title='VARCHAR2(255) not null' >SI_TITLE</tspan>
+    <tspan x='65' dx='0' dy='13'  title='CLOB not null' >SI_TEXT</tspan>
+</text>
+<rect x='1027' y='1047' width='143' height='143' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1027' y='1047' width='143' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1027' y='1053' >
+  <tspan x='1027' dx='13' dy='6' title='Contains a single row with some aggregate info no the state of the site.' >SITE_STATS</tspan>
+</text>
+<text x='1027' y='1066'>
+    <tspan x='1040' dx='0' dy='13'  title='NUMBER(22) not null' >SS_ROW_ID</tspan>
+    <tspan x='1040' dx='0' dy='13' style='fill:#646464' title='NUMBER(22) default  0 ' >SS_TOTAL_VIEWS</tspan>
+    <tspan x='1040' dx='0' dy='13' style='fill:#646464' title='NUMBER(22) default  0 ' >SS_TOTAL_EDITS</tspan>
+    <tspan x='1040' dx='0' dy='13' style='fill:#646464' title='NUMBER(22) default  0 ' >SS_GOOD_ARTICLES</tspan>
+    <tspan x='1040' dx='0' dy='13' style='fill:#646464' title='NUMBER(22) default  -1 ' >SS_TOTAL_PAGES</tspan>
+    <tspan x='1040' dx='0' dy='13' style='fill:#646464' title='NUMBER(22) default  -1 ' >SS_USERS</tspan>
+    <tspan x='1040' dx='0' dy='13' style='fill:#646464' title='NUMBER(22) default  -1 ' >SS_ADMINS</tspan>
+    <tspan x='1040' dx='0' dy='13' style='fill:#646464' title='NUMBER(22) default  0 ' >SS_IMAGES</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 962 832 L 981,832 Q 988,832 988,825 L 988,819' />
+<rect x='845' y='800' width='117' height='78' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='845' y='800' width='117' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='845' y='806' >
+  <tspan x='845' dx='13' dy='6' title='TEMPLATELINKS contains for each current page inclusino the id of the host page,
+the namespace number of the included page, and its title without namespace.' >TEMPLATELINKS</tspan>
+</text>
+    <rect x='845' y='819' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+    <rect x='845' y='845' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='845' y='819'>
+    <tspan x='858' dx='0' dy='13'  title='NUMBER(22) not null' >TL_FROM</tspan>
+    <tspan x='858' dx='0' dy='13'  title='NUMBER(22) not null' >TL_NAMESPACE</tspan>
+    <tspan x='858' dx='0' dy='13'  title='VARCHAR2(255) not null' >TL_TITLE</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 910 468 L 721,468 Q 715,468 715,474 L 715,481' />
+<rect x='923' y='423' width='104' height='117' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='923' y='423' width='104' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='923' y='429' >
+  <tspan x='923' dx='13' dy='6' title='Stores trackbacks from external sites - provides notification when 
+someone links to one of the wiki s pages.' >TRACKBACKS</tspan>
+</text>
+    <rect x='923' y='442' width='13' height='13' style='fill:url(#pk); stroke:none;' />
+<text x='923' y='442'>
+    <tspan x='936' dx='0' dy='13'  title='NUMBER(22) not null' >TB_ID</tspan>
+    <tspan x='936' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >TB_PAGE</tspan>
+    <tspan x='936' dx='0' dy='13'  title='VARCHAR2(255) not null' >TB_TITLE</tspan>
+    <tspan x='936' dx='0' dy='13'  title='VARCHAR2(255) not null' >TB_URL</tspan>
+    <tspan x='936' dx='0' dy='13' style='fill:#646464' title='CLOB' >TB_EX</tspan>
+    <tspan x='936' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(255)' >TB_NAME</tspan>
+</text>
+<rect x='1755' y='345' width='117' height='78' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='1755' y='345' width='117' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='1755' y='351' >
+  <tspan x='1755' dx='13' dy='6' title='This table is a cache of interwiki transclusion.' >TRANSCACHE</tspan>
+</text>
+<text x='1755' y='364'>
+    <tspan x='1768' dx='0' dy='13'  title='VARCHAR2(255) not null' >TC_URL</tspan>
+    <tspan x='1768' dx='0' dy='13'  title='CLOB not null' >TC_CONTENTS</tspan>
+    <tspan x='1768' dx='0' dy='13'  title='TIMESTAMP(6) WITH TIME ZONE(13,6) not null' >TC_TIME</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 780 1209 L 812,1209 Q 819,1209 819,1202 L 819,1079' />
+<rect x='676' y='1177' width='104' height='65' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='676' y='1177' width='104' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='676' y='1183' >
+  <tspan x='676' dx='13' dy='6' >USER_GROUPS</tspan>
+</text>
+    <rect x='676' y='1209' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='676' y='1196'>
+    <tspan x='689' dx='0' dy='13' style='fill:#646464' title='NUMBER(22)' >UG_USER</tspan>
+    <tspan x='689' dx='0' dy='13'  title='CHAR(16) not null' >UG_GROUP</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 377 1209 L 422,1209 Q 429,1209 429,1202 L 429,929 Q 429,923 435,923 L 442,923' />
+<rect x='260' y='1177' width='117' height='65' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='260' y='1177' width='117' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='260' y='1183' >
+  <tspan x='260' dx='13' dy='6' title='Stores notifications of user talk changes, 
+for the display of the  you have new messages  box.' >USER_NEWTALK</tspan>
+</text>
+<text x='260' y='1196'>
+    <tspan x='273' dx='0' dy='13'  title='NUMBER(22) not null' >USER_ID</tspan>
+    <tspan x='273' dx='0' dy='13' style='fill:#646464' title='VARCHAR2(40)' >USER_IP</tspan>
+</text>
+<path transform='translate(6,-3)' marker-start='url(#foot)'    d='M 416 1066 L 422,1066 Q 429,1066 429,1059 L 429,1053' />
+<rect x='234' y='1034' width='182' height='91' rx='6' ry='6' style='fill:white;filter:url(#dropShadow);' />
+<rect x='234' y='1034' width='182' height='19' rx='6' ry='6' style='fill:url(#grTableHeader);' />
+<text x='234' y='1040' >
+  <tspan x='234' dx='13' dy='6' title='Contains for each registered user his or her id, and for all the pages the user watches, 
+the namespace number, the page title without namespace and a notification timestamp, 
+used for page change notification.' >WATCHLIST</tspan>
+</text>
+    <rect x='234' y='1053' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+    <rect x='234' y='1079' width='13' height='13' style='fill:url(#idx); stroke:none;' />
+<text x='234' y='1053'>
+    <tspan x='247' dx='0' dy='13'  title='NUMBER(22) not null' >WL_USER</tspan>
+    <tspan x='247' dx='0' dy='13'  title='NUMBER(22) not null default  0 ' >WL_NAMESPACE</tspan>
+    <tspan x='247' dx='0' dy='13'  title='VARCHAR2(255) not null' >WL_TITLE</tspan>
+    <tspan x='247' dx='0' dy='13' style='fill:#646464' title='TIMESTAMP(6) WITH TIME ZONE(13,6)' >WL_NOTIFICATIONTIMESTAMP</tspan>
+</text>
+</svg>

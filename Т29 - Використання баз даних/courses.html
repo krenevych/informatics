@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+
+	<title>Курси</title>
+	<body>
+		<h2 align=center>Список курсів</h2>
+		<table align=center>
+			<!-- Вставити рядки таблиці курсів -->
+			{0}
+		<tr>
+			<td>
+				<!-- форма додавання курсу -->
+				<form method=POST action="/course/create">
+					{3}
+					<input type=hidden name=sid value="{1}">
+		</form>
+			</td>
+		</table>
+		<!-- Показати курси, на які записаний студент -->
+		{2}
+	</body>
+</html>

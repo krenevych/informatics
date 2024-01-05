@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+
+	<title>Перегляд курсу</title>
+	<body>
+		<h2 align=center>Перегляд курсу</h2>
+		<form method=POST action="/course">
+			<table align=center>
+				<tr>
+					<td align=left> 
+						<font size="4">
+							Назва курсу
+						</font>
+					</td>
+				<tr>
+					<td align=left> 
+						<input type=text name=name value="{0}" size=99 readonly>
+					</td>
+				<tr>
+					<td align=left> 
+						<font size="4">
+							Опис курсу
+						</font>
+					</td>
+				<tr>
+					<td align=left> 
+						<textarea name=description rows=7 cols=100 readonly>
+						{1}
+						</textarea>
+					</td>
+				<tr>
+					<td align=left> 
+						<font size="4">
+							Програма курсу
+						</font>
+					</td>
+				<tr>
+					<td>
+						<textarea name=program rows=20 cols=100 readonly>
+						{2}
+						</textarea>
+					</td>
+				<tr>
+					<td>
+						<input type=submit value="Назад">
+					</td>
+			<table>
+			<input type=hidden name=sid value="{3}">
+		</form>
+	</body>
+</html>

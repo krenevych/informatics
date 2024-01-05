@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+
+	<title>{6}</title>
+	<body>
+		<h2 align=center>{6}</h2>
+		<form method=POST action="/course/{0}">
+			<table align=center>
+				<tr>
+					<td align=left> 
+						<font size="4">
+							Назва курсу
+						</font>
+					</td>
+				<tr>
+					<td align=left> 
+						<input type=text name=name value="{1}" size=99>
+					</td>
+				<tr>
+					<td align=left> 
+						<font size="4">
+							Опис курсу
+						</font>
+					</td>
+				<tr>
+					<td align=left> 
+						<textarea name=description rows=7 cols=100>
+						{2}
+						</textarea>
+					</td>
+				<tr>
+					<td align=left> 
+						<font size="4">
+							Програма курсу
+						</font>
+					</td>
+				<tr>
+					<td>
+						<textarea name=program rows=20 cols=100>
+						{3}
+						</textarea>
+					</td>
+				<tr>
+					<td>
+						<input type=submit name="save" value="Зберегти">
+						<input type=submit name="cancel" value="Відмінити">
+					</td>
+			<table>
+			<input type=hidden name=sid value="{4}">
+			<input type=hidden name=courseid value="{5}">
+		</form>
+	</body>
+</html>

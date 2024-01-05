@@ -36,10 +36,10 @@ if __name__ == "__main__":
     #webpage = input("webpage: ")
     #dirpath = input("dirpath: ")
     webpage = """
-http://www.matfiz.univ.kiev.ua/pages/38
+http://www.matfiz.univ.kiev.ua/pages/47
     """.strip()
     
     dirpath = r"""
-D:\Repo\informatics\Т22 - Використання операційної системи
+D:\Repo\informatics\Т30 - Тестування. Розповсюдження власних застосувань
     """.strip()
     download_files(webpage, dirpath)

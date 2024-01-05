@@ -1,4 +1,0 @@
-Interval = 0.01 
-Directories = "C:/obv/Lect_Python2/T22 C:\obv\Lect_Python2\T21 C:\obv\Lect_Python2\T24" 
-BackupDirectory = "D:\Temp\Backup" 
-

@@ -1,4 +1,0 @@
-#конфігураційний файл для backup
-BackupDirectory = 'd:/temp/backup'
-Directories = 'C:/obv/Lect_Python2/T22'
-Interval = 0.01

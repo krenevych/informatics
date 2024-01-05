@@ -1,4 +1,0 @@
-Info from Python 1
-Info from Python 2
-Info from Python 3
-Info from Python 445

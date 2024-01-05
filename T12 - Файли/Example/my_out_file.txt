@@ -1,1 +1,0 @@
-['Info from Python 1\n', 'Info from Python 2\n', 'Info from Python 3\n']

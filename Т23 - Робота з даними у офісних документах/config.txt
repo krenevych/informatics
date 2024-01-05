@@ -1,7 +1,0 @@
-#конфігураційний файл для побудови екзаменаційних білетів
-LeadParam = 'Num'
-Template = 'BiletyTemplate.docx'
-Num = 'Quest.xlsx'
-Quest1 = 'Quest.xlsx'
-Quest2 = 'Quest.xlsx'
-Task = 'Tasks.docx'

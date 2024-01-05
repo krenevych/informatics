@@ -1,4 +1,0 @@
-#конфігураційний файл для backup
-BackupDirectory = 'c:/temp/backup'
-Directories = '../..'
-Interval = 0.01

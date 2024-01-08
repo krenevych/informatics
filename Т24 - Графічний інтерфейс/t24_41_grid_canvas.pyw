@@ -1,245 +1,286 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Кафедра математичної фізики</title>
-    <meta name="description" content="Офіційний сайт кафедри математичної фізики. Механіко-математичний факультет. Київський національний університет імені Тараса Шевченка">
+#t24_41
+# Клас GridCanvas для зображення поля у клітинку заданого розміру rows x cols
 
-    <!-- Bootstrap -->
-    <link href="/assets/bs/css/bootstrap.css" rel="stylesheet">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="/assets/js/jquery.min.js"></script>
+from tkinter import *
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="/assets/css/extra.css">
-</head>
-<body>
-<div class="container" align="center">
-    <br/>
-    <a href="http://univ.kiev.ua/" target="_blank">Київський національний університет імені Тараса Шевченка</a> <br>
-    <a href="http://mechmat.univ.kiev.ua/" target="_blank">Механіко-математичний факультет</a>
+class BoundObj:
+    '''Клас об'єкта, який прив'язано до клітинки поля row  col.
 
-    <h1 style="color:#444;font-weight: bold">КАФЕДРА МАТЕМАТИЧНОЇ ФІЗИКИ</h1>
-</div>
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
+       self.master - охоплюючий об'єкт - поле у клітинку
+       self.row - номер рядка
+       self.col - номер стовпчика
+       self.obj - об'єкт, який буде зображено. Об'єкт повинен мати метод draw,
+                  який повертає номер об'єкту.
+       self.fill - колір заповнення
+       self.outline - колір границі
+       self.features - додаткові характеристики об'єкту
+       self.id - номер об'єкту, що буде зображено, у полі
+    '''
+    def __init__(self, master, row, col, obj, fill='black', outline='white',
+                 **features):
+        self.master = master
+        self.row = row
+        self.col = col
+        self.obj = obj
+        self.fill = fill
+        self.outline = outline
+        self.features = features
 
-            <button type="button" class="navbar-toggle collapsed" style="width:90%" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                Головне меню
-            </button>
-<!--            {#<a class="navbar-brand" href="#">Project name</a>#}-->
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+    def draw(self, width, height, ratio):
+        '''Зобразити об'єкт шириною width висотою height з заповненням ratio.
+        '''
+        left = self.col * width     # лівий верхній кут зображення (х)
+        top = self.row * height     # лівий верхній кут зображення (y)
+        self.id = self.obj.draw(self.master, left, top, width, height, ratio,
+                                self.fill, self.outline)
 
-                <li ><a href="/">Головна</a></li>
-                <li >
-                    <a href='#' class="dropdown-toggle" id="department-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="cursor:pointer;">
-                        Матеріали
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                        <li class="dropdown-submenu"><a href="/pages/1" >Кафедра</a>
-<ul class="dropdown-menu" >
-    <li ><a href="/pages/3" >Історична довідка</a>
-</li>
-<li ><a href="/pages/8" >Г. М. Положій - 100 років від дня народженя</a>
-</li>
-<li ><a href="/pages/6" >Навчальний процес</a>
-</li>
-<li ><a href="/pages/4" >Навчально-методичні публікації</a>
-</li>
-<li ><a href="/pages/5" >Наукова діяльність</a>
-</li>
-<li ><a href="/pages/7" >Науковий семінар</a>
-</li>
-</ul></li>
-<li class="dropdown-submenu"><a href="/pages/2" >Студенту</a>
-<ul class="dropdown-menu" >
-    <li class="dropdown-submenu"><a href="/pages/12" >Навчальні матеріали</a>
-<ul class="dropdown-menu" >
-    <li class="dropdown-submenu"><a href="/pages/13" >Python</a>
-<ul class="dropdown-menu" >
-    <li ><a href="/pages/15" >Тема 1. Лінійні програми</a>
-</li>
-<li ><a href="/pages/16" >Тема 2. Розгалужені програми</a>
-</li>
-<li ><a href="/pages/17" >Тема 3. Циклічні програми</a>
-</li>
-<li ><a href="/pages/18" >Тема 4. Числові типи даних</a>
-</li>
-<li ><a href="/pages/20" >Тема 5. Рядки</a>
-</li>
-<li ><a href="/pages/21" >Тема 6. Списки</a>
-</li>
-<li ><a href="/pages/22" >Тема 7. Кортежі</a>
-</li>
-<li ><a href="/pages/24" >Тема 8. Словники</a>
-</li>
-<li ><a href="/pages/25" >Тема 9. Підпрограми</a>
-</li>
-<li ><a href="/pages/26" >Тема 10. Модулі та пакети</a>
-</li>
-<li ><a href="/pages/27" >Тема 11. Множини</a>
-</li>
-<li ><a href="/pages/28" >Тема 12. Файли</a>
-</li>
-<li ><a href="/pages/29" >Тема 13. Класи та об’єкти</a>
-</li>
-<li ><a href="/pages/30" >Тема 14. Рекурсивні структури даних/Наслідування та агрегація</a>
-</li>
-<li ><a href="/pages/31" >Тема 15. Обробка помилок та виключних ситуацій</a>
-</li>
-<li ><a href="/pages/32" >Тема 16. Ітератори та генератори</a>
-</li>
-<li ><a href="/pages/33" >Тема 17. Декоратори</a>
-</li>
-<li ><a href="/pages/34" >Тема 18. Множинне наслідування</a>
-</li>
-<li ><a href="/pages/35" >Тема 19. Метакласи та метапрограмування</a>
-</li>
-<li ><a href="/pages/36" >Тема 20. Наукові обчислення / Графічний інтерфейс</a>
-</li>
-<li ><a href="/pages/37" >Тема 21. Регулярні вирази</a>
-</li>
-<li ><a href="/pages/38" >Тема 22. Використання операційної системи</a>
-</li>
-<li ><a href="/pages/39" >Тема 23. Робота з даними у офісних документах</a>
-</li>
-<li ><a href="/pages/40" >Тема 24. Графічний інтерфейс</a>
-</li>
-<li ><a href="/pages/41" >Тема 25. Загальна будова глобальних мереж</a>
-</li>
-<li ><a href="/pages/42" >Тема 26. Побудова веб-клієнтів</a>
-</li>
-<li ><a href="/pages/43" >Тема 27. Побудова веб-серверів</a>
-</li>
-<li ><a href="/pages/44" >Тема 28. XML та JSON</a>
-</li>
-<li ><a href="/pages/46" >Тема 29. Використання баз даних</a>
-</li>
-<li ><a href="/pages/47" >Тема 30. Тестування. Розповсюдження власних застосувань</a>
-</li>
-<li ><a href="/pages/45" >Програмні проекти для студентів 2 курсу</a>
-</li>
-<li ><a href="/pages/19" >Звідки завантажити</a>
-</li>
-<li class="dropdown-submenu"><a href="/pages/48" >Прикладне програмування, комп'ютерна математика</a>
-<ul class="dropdown-menu" >
-    <li ><a href="/pages/49" >Тема 1. Регулярні вирази</a>
-</li>
-<li ><a href="/pages/50" >Тема 2. Використання операційної системи</a>
-</li>
-<li ><a href="/pages/51" >Тема 3. Робота з даними у офісних документах</a>
-</li>
-<li ><a href="/pages/52" >Тема 4. Паралельні обчислення</a>
-</li>
-<li ><a href="/pages/53" >Тема 5. Загальна будова глобальних мереж</a>
-</li>
-<li ><a href="/pages/54" >Тема 6. Побудова веб-клієнтів</a>
-</li>
-<li ><a href="/pages/55" >Тема 7. Побудова веб-серверів</a>
-</li>
-<li ><a href="/pages/56" >Тема 8. Використання баз даних</a>
-</li>
-</ul></li>
-<li ><a href="/pages/23" >Список літератури</a>
-</li>
-<li ><a href="/pages/57" >Управління проектами, комп'ютерна математика</a>
-</li>
-</ul></li>
-<li ><a href="/pages/14" >Інше</a>
-</li>
-</ul></li>
-<li ><a href="/pages/10" >Розклад занять викладачів</a>
-</li>
-<li ><a href="/pages/11" >Розклад консультацій викладачів</a>
-</li>
-<li ><a href="/pages/9" >Теми курсових і дипломних робіт</a>
-</li>
-</ul></li>
-                    </ul>
-                </li>
+class BoundOval:
+    '''Клас овал, який прив'язано до клітинки поля.
+
+    '''
+    def __init__(self):
+        pass
+
+    def draw(self, master, left, top, width, height, ratio, fl, outl):
+        '''Зобразити овал шириною width висотою height з заповненням ratio.
+
+           Лівий верхній кут - (left, top)
+           Колір заповнення - fl
+           Колір границі - outl
+        '''
+        if not outl:
+            outl = fl
+        r2 = (1 - ratio) / 2
+        # визначаємо охоплюючий прямокутник
+        xmin = left + int(width *r2)
+        ymin = top + int(height *r2)
+        xmax = left + int(width * (1 - r2))
+        ymax = top + int(height * (1 - r2))
+        # зображуємо овал та отримуємо його номер
+        id = master.create_oval(xmin, ymin, xmax, ymax,
+                                fill=fl, outline=outl)
+        return id
+        
 
 
-<!--                {{ render(controller('AppBundle:Page:DropDown')) }}-->
-                <li ><a href="/department">Персоналії</a></li>
-                <li ><a href="/photo-gallery">Галерея</a></li>
-                <li ><a href="/books">Бібліотека</a></li>
-                <li ><a href="/contact-us">Контакти</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
+class GridCanvas(Canvas):
+    '''Клас для зображення поля у клітинку заданого розміру rows x cols.
 
-<div class="container">
-    <ol class="breadcrumb no-margin">
-    <li><a href="/">Головна</a></li>
-    <li class="active">Помилка</li>
-</ol>
-<div class="container">
-    <br/>
-    <h2 align="center">Отакої :(</h2><br/>
-    <div class="alert alert-danger" role="alert" align="center">
-        <h3>404 : Сторінку не знайдено </h3>
-        <h4></h4>
-    </div>
-</div>
+       Клас є нащадком Canvas.
+       self.rows - кільксть рядків поля
+       self.cols - кількість стовпчиків поля
+       self.selection_handler - функція, що буде викликатись при виборі
+                                клітинки поля
+       self.bordercolor - колір границі між клітинками
+       self.evenbg - колір заповнення клітинок з парними номерами
+                      (якщо відрізняється для парних та непарних номерів).
+                      Перша клітинка має номер 0
+       self.highlightbg - колір заповнення вибраної клітинки
+       self.ratio - відсоток заповнення площі клітинки зв'язаним об'єктом
+       self.cellwidth - ширина клітинки
+       self.cellheight - висота клітинки
+       self.grid - матриця, що складається зі зв'язаних об'єктів
+                    для всіх клітинок. Якщо до клітинки не први'язано
+                    об'єкт, то значення відповідного елемента - None.
+       self.moved - змінна tkinter для контролю завершення переміщення
+    '''
 
-</div>
+    def __init__(self, master, rows, cols, selection_handler, *args,
+                 bordercolor='black', evenbg='', ratio = 0.85,
+                 highlightbg='grey', **kwargs):
+        Canvas.__init__(self, master, *args, **kwargs)
+        self.rows = rows
+        self.cols = cols
+        self.selection_handler = selection_handler
+        self.bordercolor = bordercolor
+        self.evenbg = evenbg
+        self.highlightbg = highlightbg
+        self.ratio = ratio
+        self.cellwidth = int(self['width'])//self.cols
+        self.cellheight = int(self['height'])//self.rows
+        # заповнити матрицю зв'язаних об'єктів значенням None
+        self.grid = []
+        for row in range(rows):
+            self.grid.append([])
+            for col in range(cols):
+                self.grid[row].append(None)
+        # зобразити поле
+        self._drawgrid()
+        # прив'язати подію натиснення лівої клавіші миші над клітинкою поля
+        self.bind('<Button-1>', self.on_click)
+        self.moved = IntVar()
+        self.moved.set(1)
 
-<br/><br/>
+    def _tagstr(self, row, col):
+        '''Побудувати рядок з тегом для клітинки (row, col).
 
-<div id="footer">
-    <div class="container">
-        <div class="col-md-8">
-            Київський національний університет імені Тараса Шевченка <br/>
-            Механіко-математичний факультет <br/>
-            Кафедра математичної фізики <br> <br/>
-            Київ, Україна <br>
-            2015 © Всі права захищено
-        </div>
-        <div class="col-md-4">
-            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="/contact-us">Зворотній зв'язок</a> <br/>
-<!--            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="/login">Вхід адміністратора</a>-->
+           Наприклад: 't001002'
+        '''
+        return 't{:0>3}{:0>3}'.format(row, col)
 
-        </div>
+    def _drawgrid(self):
+        '''Зобразити поле з прямокутників.
+        '''
+        for row in range(self.rows):
+            for col in range(self.cols):
+                # визначити границі прямокутника
+                # для клітинки (row, col)
+                xstart = col * self.cellwidth
+                ystart = row * self.cellheight
+                xend = xstart + self.cellwidth + 1
+                yend = ystart + self.cellheight + 1
+                # визначити колір заповнення
+                if self.evenbg and (row + col) % 2 == 0:
+                    bg = self.evenbg
+                else:
+                    bg = self['bg']
+                # зобразити прямокутник та встановити його тег
+                self.create_rectangle(xstart, ystart, xend, yend,
+                                      width = self['bd'], fill = bg,
+                                      outline = self.bordercolor,
+                                      tags=self._tagstr(row, col))
+        
 
-    </div>
-</div>
+    def create_bound(self, row, col, obj, fill='black', outline='white',
+                     **features):
+        '''Створити та зобразити зв'язаний об'єкт для row, col.
+
+           obj - об'єкт, що буде зображено
+           fill, outline - кольори заповнення та границі
+           features - додаткові характеристики об'єкту
+        '''
+        self.grid[row][col] = BoundObj(self, row, col,
+                                       obj, fill, outline, **features)
+        self.grid[row][col].draw(self.cellwidth,
+                                 self.cellheight, self.ratio)
+
+    def delete_bound(self, row, col):
+        '''Видалити зв'язаний об'єкт для row, col.'''
+        bo = self.grid[row][col]
+        if bo:
+            self.delete(bo.id)
+            self.grid[row][col] = None
+
+    def _movestep(self, id, ddx, ddy, xfinal, yfinal):
+        '''Зробити 1 крок для "повільного" пересування об'єкту.
+
+           id - номер об'єкту,
+           ddx, ddy - кроки по x, y,
+           xfinal, yfinal - кінцеві координати лівого верхнього кута
+        '''
+        x, y, mx, my = self.coords(id) # отримати поточні координати
+        # обчислити нові значення ddx, ddy
+        if x == xfinal:
+            ddx = 0
+        if y == yfinal:
+            ddy = 0
+        if ddx or ddy: # якщо не дійшли до кінця
+            self.move(id, ddx, ddy) # перемістити об'єкт
+            # встановити виклик переміщення на наступний крок
+            # через 5 мілісекунд
+            self.after(5, self._movestep, id, ddx, ddy, xfinal, yfinal)
+        else:
+            # змінити self.moved, щоб зафіксувати завершення переміщення
+            self.moved.set(1)
+
+
+    def move_bound(self, fromrow, fromcol, torow, tocol, slow=False):
+        '''Пересування об'єкту.
+
+           fromrow, fromcol - початкова клітинка,
+           torow, tocol - кінцева клітинка,
+           slow - пересувати повільно
+        '''
+        # визначити зсув по x, y
+        dx = (tocol - fromcol) * self.cellwidth
+        dy = (torow - fromrow) * self.cellheight
+        bo = self.grid[fromrow][fromcol] # отримати зв'язаний об'єкт
+        if bo and (dx != 0 or dy != 0): # є що і куди переміщувати
+            if slow: # якщо пересувати повільно
+                # встановити зсув на 1 крок рівним 1, 0 або -1
+                # у залежності від dx, dy
+                ddx = _sign(dx)
+                ddy = _sign(dy)
+                # обчислити фінальні координати
+                xfinal = tocol * self.cellwidth + \
+                         int(self.cellwidth*(1 - self.ratio)/2)
+                yfinal = torow * self.cellheight + \
+                         int(self.cellheight*(1 - self.ratio)/2)
+                # запустити анімацію пересування
+                self.moved.set(0)
+                self._movestep(bo.id, ddx, ddy, xfinal, yfinal)
+                # очікувати зміни значення self.moved
+                self.wait_variable(self.moved)
+            else:
+                # пересунути одразу на dx, dy
+                self.move(bo.id, dx, dy)
+            # переприв'язати об'єкт
+            self.grid[fromrow][fromcol] = None
+            self.grid[torow][tocol] = bo
+
+    def select_cell(self, row, col):
+        '''Вибрати (підсвітити) клітинку row, col.'''
+        self.itemconfigure(self._tagstr(row, col), fill=self.highlightbg)
+
+    def deselect_cell(self, row, col):
+        '''Зняти вибір (підсвітчення) клітинки row, col.'''
+        if self.evenbg and (row + col) % 2 == 0:
+            bg = self.evenbg
+        else:
+            bg = self['bg']
+        self.itemconfigure(self._tagstr(row, col), fill=bg)
+        
+
+    def on_click(self, ev):
+        '''Обробка натиснення лівої клавіші миші.'''
+        # дозволити обробку подій тільки коли об'єкт не переміщується
+        if self.moved.get(): 
+            # визначити клітинку, де знаходиться миша
+            x = self.canvasx(ev.x) # перевести координати вікна
+            y = self.canvasy(ev.y) # у координати canvas
+            row = min(int(y) // self.cellheight, self.rows - 1)
+            col = min(int(x) // self.cellwidth, self.cols - 1)
+            # викликати функцію обробки вибору клітинки
+            self.selection_handler(self, row, col)
+        
+def _sign(val):
+    "signum(val)"
+    if val > 0:
+        sign = 1
+    elif val == 0:
+        sign = 0
+    else:
+        sign = -1
+    return sign
 
 
 
+# тест модуля
+lastrow = 2
+lastcol = 2
 
+def sel_handler(gc, row, col):
+    '''Приклад функції обробки вибору клітинки.'''
+    global lastrow, lastcol
+    gc.deselect_cell(lastrow, lastcol)
+    gc.move_bound(lastrow, lastcol, row, col, slow=True)
+    gc.select_cell(row, col)
+    lastrow = row
+    lastcol = col
 
+        
+def main():
+    '''Функція для тестування.
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/assets/bs/js/bootstrap.min.js"></script>
+       Працює, коли модуль є головним
+    '''
+    top = Tk()
+    gc = GridCanvas(top, 8, 8, sel_handler, bordercolor = 'grey',
+                    evenbg = 'white',
+                    width=350, height=350, bg='black', bd=2)
+    gc.pack()
+    gc.create_bound(2, 2, BoundOval(), fill='red')
+    mainloop()
 
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-19922701-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
-
-</body>
-</html>
-
+if __name__ == '__main__':
+    main()

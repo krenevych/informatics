@@ -1,245 +1,187 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Кафедра математичної фізики</title>
-    <meta name="description" content="Офіційний сайт кафедри математичної фізики. Механіко-математичний факультет. Київський національний університет імені Тараса Шевченка">
+#t29_22_courses_iface.py
+#Клас інтерфейсу курсів.
 
-    <!-- Bootstrap -->
-    <link href="/assets/bs/css/bootstrap.css" rel="stylesheet">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="/assets/js/jquery.min.js"></script>
+# назви кнопок
+BUTTONS = {"list": "Список студентів",
+           "create": "Створити курс",
+           "modify": "Змінити",
+           "delete" : "Видалити",
+           "apply": "Записатись",
+           "unapply": "Відписатись",
+           "back": "Назад"
+           }
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="/assets/css/extra.css">
-</head>
-<body>
-<div class="container" align="center">
-    <br/>
-    <a href="http://univ.kiev.ua/" target="_blank">Київський національний університет імені Тараса Шевченка</a> <br>
-    <a href="http://mechmat.univ.kiev.ua/" target="_blank">Механіко-математичний факультет</a>
+BUTTONS_IN_ROW = 4  #кількість клітинок для кнопок у таблиці курсів
 
-    <h1 style="color:#444;font-weight: bold">КАФЕДРА МАТЕМАТИЧНОЇ ФІЗИКИ</h1>
-</div>
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
+# кнопки у таблиці курсів
+GRID_BUTTONS = ["list", "modify", "delete", "apply"]
 
-            <button type="button" class="navbar-toggle collapsed" style="width:90%" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                Головне меню
-            </button>
-<!--            {#<a class="navbar-brand" href="#">Project name</a>#}-->
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-
-                <li ><a href="/">Головна</a></li>
-                <li >
-                    <a href='#' class="dropdown-toggle" id="department-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="cursor:pointer;">
-                        Матеріали
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                        <li class="dropdown-submenu"><a href="/pages/1" >Кафедра</a>
-<ul class="dropdown-menu" >
-    <li ><a href="/pages/3" >Історична довідка</a>
-</li>
-<li ><a href="/pages/8" >Г. М. Положій - 100 років від дня народженя</a>
-</li>
-<li ><a href="/pages/6" >Навчальний процес</a>
-</li>
-<li ><a href="/pages/4" >Навчально-методичні публікації</a>
-</li>
-<li ><a href="/pages/5" >Наукова діяльність</a>
-</li>
-<li ><a href="/pages/7" >Науковий семінар</a>
-</li>
-</ul></li>
-<li class="dropdown-submenu"><a href="/pages/2" >Студенту</a>
-<ul class="dropdown-menu" >
-    <li class="dropdown-submenu"><a href="/pages/12" >Навчальні матеріали</a>
-<ul class="dropdown-menu" >
-    <li class="dropdown-submenu"><a href="/pages/13" >Python</a>
-<ul class="dropdown-menu" >
-    <li ><a href="/pages/15" >Тема 1. Лінійні програми</a>
-</li>
-<li ><a href="/pages/16" >Тема 2. Розгалужені програми</a>
-</li>
-<li ><a href="/pages/17" >Тема 3. Циклічні програми</a>
-</li>
-<li ><a href="/pages/18" >Тема 4. Числові типи даних</a>
-</li>
-<li ><a href="/pages/20" >Тема 5. Рядки</a>
-</li>
-<li ><a href="/pages/21" >Тема 6. Списки</a>
-</li>
-<li ><a href="/pages/22" >Тема 7. Кортежі</a>
-</li>
-<li ><a href="/pages/24" >Тема 8. Словники</a>
-</li>
-<li ><a href="/pages/25" >Тема 9. Підпрограми</a>
-</li>
-<li ><a href="/pages/26" >Тема 10. Модулі та пакети</a>
-</li>
-<li ><a href="/pages/27" >Тема 11. Множини</a>
-</li>
-<li ><a href="/pages/28" >Тема 12. Файли</a>
-</li>
-<li ><a href="/pages/29" >Тема 13. Класи та об’єкти</a>
-</li>
-<li ><a href="/pages/30" >Тема 14. Рекурсивні структури даних/Наслідування та агрегація</a>
-</li>
-<li ><a href="/pages/31" >Тема 15. Обробка помилок та виключних ситуацій</a>
-</li>
-<li ><a href="/pages/32" >Тема 16. Ітератори та генератори</a>
-</li>
-<li ><a href="/pages/33" >Тема 17. Декоратори</a>
-</li>
-<li ><a href="/pages/34" >Тема 18. Множинне наслідування</a>
-</li>
-<li ><a href="/pages/35" >Тема 19. Метакласи та метапрограмування</a>
-</li>
-<li ><a href="/pages/36" >Тема 20. Наукові обчислення / Графічний інтерфейс</a>
-</li>
-<li ><a href="/pages/37" >Тема 21. Регулярні вирази</a>
-</li>
-<li ><a href="/pages/38" >Тема 22. Використання операційної системи</a>
-</li>
-<li ><a href="/pages/39" >Тема 23. Робота з даними у офісних документах</a>
-</li>
-<li ><a href="/pages/40" >Тема 24. Графічний інтерфейс</a>
-</li>
-<li ><a href="/pages/41" >Тема 25. Загальна будова глобальних мереж</a>
-</li>
-<li ><a href="/pages/42" >Тема 26. Побудова веб-клієнтів</a>
-</li>
-<li ><a href="/pages/43" >Тема 27. Побудова веб-серверів</a>
-</li>
-<li ><a href="/pages/44" >Тема 28. XML та JSON</a>
-</li>
-<li ><a href="/pages/46" >Тема 29. Використання баз даних</a>
-</li>
-<li ><a href="/pages/47" >Тема 30. Тестування. Розповсюдження власних застосувань</a>
-</li>
-<li ><a href="/pages/45" >Програмні проекти для студентів 2 курсу</a>
-</li>
-<li ><a href="/pages/19" >Звідки завантажити</a>
-</li>
-<li class="dropdown-submenu"><a href="/pages/48" >Прикладне програмування, комп'ютерна математика</a>
-<ul class="dropdown-menu" >
-    <li ><a href="/pages/49" >Тема 1. Регулярні вирази</a>
-</li>
-<li ><a href="/pages/50" >Тема 2. Використання операційної системи</a>
-</li>
-<li ><a href="/pages/51" >Тема 3. Робота з даними у офісних документах</a>
-</li>
-<li ><a href="/pages/52" >Тема 4. Паралельні обчислення</a>
-</li>
-<li ><a href="/pages/53" >Тема 5. Загальна будова глобальних мереж</a>
-</li>
-<li ><a href="/pages/54" >Тема 6. Побудова веб-клієнтів</a>
-</li>
-<li ><a href="/pages/55" >Тема 7. Побудова веб-серверів</a>
-</li>
-<li ><a href="/pages/56" >Тема 8. Використання баз даних</a>
-</li>
-</ul></li>
-<li ><a href="/pages/23" >Список літератури</a>
-</li>
-<li ><a href="/pages/57" >Управління проектами, комп'ютерна математика</a>
-</li>
-</ul></li>
-<li ><a href="/pages/14" >Інше</a>
-</li>
-</ul></li>
-<li ><a href="/pages/10" >Розклад занять викладачів</a>
-</li>
-<li ><a href="/pages/11" >Розклад консультацій викладачів</a>
-</li>
-<li ><a href="/pages/9" >Теми курсових і дипломних робіт</a>
-</li>
-</ul></li>
-                    </ul>
-                </li>
+BUTTON = '<input type=submit value="{0}">'
+DISABLED_BUTTON = '<input type=submit value="{0}" disabled>'
 
 
-<!--                {{ render(controller('AppBundle:Page:DropDown')) }}-->
-                <li ><a href="/department">Персоналії</a></li>
-                <li ><a href="/photo-gallery">Галерея</a></li>
-                <li ><a href="/books">Бібліотека</a></li>
-                <li ><a href="/contact-us">Контакти</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
+HTML_WRONG_PASS = """
 
-<div class="container">
-    <ol class="breadcrumb no-margin">
-    <li><a href="/">Головна</a></li>
-    <li class="active">Помилка</li>
-</ol>
-<div class="container">
-    <br/>
-    <h2 align="center">Отакої :(</h2><br/>
-    <div class="alert alert-danger" role="alert" align="center">
-        <h3>404 : Сторінку не знайдено </h3>
-        <h4></h4>
-    </div>
-</div>
+<p align=center>
+	<font size="4" color="red">
 
-</div>
+		Неправилний логін/пароль. Повторіть введення
+	</font>
+</p>
+"""
 
-<br/><br/>
+HTML_APPLIED = """
+<p align=center>Максимальна кількість курсів, на яку можна записатись, - {1}<p>
+<h3 align=center>Курси, на які Ви записані</h3>
+<table align=center>
+	<!-- Вставити курси -->
+	{0}
+</table>
+"""
 
-<div id="footer">
-    <div class="container">
-        <div class="col-md-8">
-            Київський національний університет імені Тараса Шевченка <br/>
-            Механіко-математичний факультет <br/>
-            Кафедра математичної фізики <br> <br/>
-            Київ, Україна <br>
-            2015 © Всі права захищено
-        </div>
-        <div class="col-md-4">
-            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="/contact-us">Зворотній зв'язок</a> <br/>
-<!--            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="/login">Вхід адміністратора</a>-->
+HTML_COURSE = "<tr><td>{0}</td>"
+HTML_STUD = "<tr><td>{0}</td><td>{1}</td><td>{2}</td>"
 
-        </div>
-
-    </div>
-</div>
+LOGIN_HTML_FILE = "course_login.html"
+COURSES_HTML_FILE = "courses.html"
+COURSE_ROW_HTML_FILE = "course_row.html"
+CREATE_HTML_FILE = "course_create.html"
+VIEW_HTML_FILE = "course_view.html"
+LIST_HTML_FILE = "course_list.html"
 
 
+class CoursesInterface:
+    """Клас реалізує інтерфейс користувача запису на курси.
+
+        self.path - шлях до поточного каталогу від wsgi-сервера
+    """
+    def __init__(self, path):
+        self.path = path
+
+    def start(self):
+        """Сформувати cторінку входу до системи.
+        """
+        with open(self.path + LOGIN_HTML_FILE, encoding='utf-8') as f:
+            # прочитати підготовлений html-файл
+            cnt = f.read()
+        return cnt
+
+    def login_error(self):
+        """Сформувати сторінку у разі помилки входу."""
+        # прочитати файл html як список
+        with open(self.path + LOGIN_HTML_FILE, encoding='utf-8') as f:
+            lines = f.readlines()
+        # вставити повідомлення про помилку перед останніми 2 тегами файлу
+        lines.insert(-2, HTML_WRONG_PASS)
+        out = ''.join(lines)
+        return out
+
+    def _add_applied(self, courses_applied, max_apply):
+        "Повернути html для курсів, на які користувач записаний."
+        applied_str = ""
+        for course in courses_applied:
+            applied_str += HTML_COURSE.format(course["name"])
+        cnt = HTML_APPLIED.format(applied_str, max_apply)
+        return cnt
+
+    def _add_course(self, course, sid, user_id, rights,
+                    max_apply, courses_authored, courses_applied, row_cnt):
+        "Повернути рядок таблиці html для одного курсу."
+        auth_ids = [c["id"] for c in courses_authored] # id курсів автора
+        apply_ids = [c["id"] for c in courses_applied] # id записаних курсів
+        rights_names = [r[0] for r in rights] # назви прав
+        row_buttons = [] # список рядків для вставки у html
+        for but in GRID_BUTTONS:
+            # якщо вже записано на курс, вставити кнопку "Відписатись"
+            if but == "apply" and course["id"] in apply_ids:
+                _but = "unapply"
+            else:
+                _but = but
+            if but in rights_names:
+                r_index = rights_names.index(but)
+                # якщо вимагає автора та користувач не є автором
+                # або користувач записаний на максимальну кількість курсів
+                if rights[r_index][1] and course["id"] not in auth_ids \
+                   or _but == "apply" and len(courses_applied) >= max_apply:
+                    but_str = DISABLED_BUTTON.format(BUTTONS[_but])
+                else:
+                    but_str = BUTTON.format(BUTTONS[_but])
+                # доповнити командою (правом) та кнопкою
+                row_buttons.append(_but)
+                row_buttons.append(but_str)
+        # якщо кнопок менше макс. кількості, - доповнити порожніми рядками
+        for i in range(len(row_buttons), BUTTONS_IN_ROW * 2):
+                row_buttons += ["", ""]
+        # список параметрів для вставки у html
+        ins = [course["id"], course["name"], sid] + row_buttons
+        cnt = row_cnt.format(*ins)
+        return cnt
 
 
+    def courses_page(self, sid, user_id, rights, max_apply, courses, 
+                courses_authored, courses_applied):
+        "Сформувати сторінку курсів."
+        with open(self.path + COURSES_HTML_FILE, encoding='utf-8') as f:
+            # прочитати підготовлений html-файл курсів
+            cnt = f.read()
+        with open(self.path + COURSE_ROW_HTML_FILE, encoding='utf-8') as f:
+            # прочитати підготовлену вставку - html-файл рядка курсу
+            row_cnt = f.read()
+        rights_names = [r[0] for r in rights] # назви прав
+        # якщо користувач має право створити курс
+        if "create" in rights_names:
+            create_button_value = BUTTONS["create"]
+            create_str = BUTTON.format(create_button_value)
+        else:
+            create_str = ""
+        # якщо користувач має право записатись на курс
+        if "apply" in rights_names:
+            apply_str = self._add_applied(courses_applied, max_apply)
+        else:
+            apply_str = ""
+        # заповнити таблицю курсів
+        grid_str = ""
+        for course in courses:
+            course_str = self._add_course(course, sid, user_id, rights,
+                                          max_apply, courses_authored,
+                                          courses_applied, row_cnt)
+            grid_str += course_str + '\n'
+        body = cnt.format(grid_str, sid, apply_str, create_str)
+        return body
+
+    def course_create_modify_page(self, sid, course=None):
+        "Сформувати сторінку створення/зміни курсу."
+        with open(self.path + CREATE_HTML_FILE, encoding='utf-8') as f:
+            # прочитати підготовлений html-файл створення/зміни курсу
+            cnt = f.read()
+        if not course:  # створити
+            body = cnt.format("created", "", "", "", sid, "", BUTTONS["create"])
+        else:   # змінити
+            body = cnt.format("modified", course["name"], course["description"],
+                    course["program"], sid, course["id"], BUTTONS["modify"])
+        return body
+    
+    def course_view_page(self, sid, course):
+        "Сформувати сторінку перегляду курсу."
+        with open(self.path + VIEW_HTML_FILE, encoding='utf-8') as f:
+            # прочитати підготовлений html-файл створення/зміни курсу
+            cnt = f.read()
+        body = cnt.format(course["name"], course["description"],
+                            course["program"], sid)
+        return body
+    
+    def course_list_page(self, sid, course, students):
+        "Сформувати сторінку списку студентів курсу."
+        with open(self.path + LIST_HTML_FILE, encoding='utf-8') as f:
+            # прочитати підготовлений html-файл списку студентів курсу
+            cnt = f.read()
+        applied_str = ""
+        for student in students:
+            applied_str += HTML_STUD.format(student["surname"],
+                                student["name"], student["secondname"])
+        body = cnt.format(course["name"], applied_str, sid)
+        return body
+        
 
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/assets/bs/js/bootstrap.min.js"></script>
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-19922701-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
-
-</body>
-</html>
-
+        

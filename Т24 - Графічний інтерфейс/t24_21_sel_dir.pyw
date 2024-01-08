@@ -1,245 +1,191 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Кафедра математичної фізики</title>
-    <meta name="description" content="Офіційний сайт кафедри математичної фізики. Механіко-математичний факультет. Київський національний університет імені Тараса Шевченка">
+#t24_21
+# Клас для перегляду вмісту каталогів та вибору каталогу
+# Перероблено на основі Wesley J. Chun - Core Python Programming
 
-    <!-- Bootstrap -->
-    <link href="/assets/bs/css/bootstrap.css" rel="stylesheet">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="/assets/js/jquery.min.js"></script>
+import os
+import sys
+from tkinter import *
+from tkinter.messagebox import *
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="/assets/css/extra.css">
-</head>
-<body>
-<div class="container" align="center">
-    <br/>
-    <a href="http://univ.kiev.ua/" target="_blank">Київський національний університет імені Тараса Шевченка</a> <br>
-    <a href="http://mechmat.univ.kiev.ua/" target="_blank">Механіко-математичний факультет</a>
+class DirSelector:
+    '''Клас для вибору каталогу зі списку каталогів.
 
-    <h1 style="color:#444;font-weight: bold">КАФЕДРА МАТЕМАТИЧНОЇ ФІЗИКИ</h1>
-</div>
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
+       self.top - вікно верхнього рівня у якому розміщено елементи
+                  з вибору каталогу
+       self.cwd - поточний каталог. Змінюється під час вибору
+       self.oldcwd - попередній поточний каталог для відновлення
+                  значення поточного каталогу після вибору
+       self.result - каталог, що вибрано. Якщо не вибрано жодного, то ''
 
-            <button type="button" class="navbar-toggle collapsed" style="width:90%" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                Головне меню
-            </button>
-<!--            {#<a class="navbar-brand" href="#">Project name</a>#}-->
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+       self.dirfl     - рамка для імені поточного каталогу
+       self.dirl      - надпис - ім'я поточного каталогу
+       self.dirfm     - рамка для списку та лінійки прокрутки
+       self.dirsb     - лінійка прокрутки
+       self.dirs      - список каталогів
+       self.bfm       - рамка для кнопок
+       self.bok       - кнопка 'Ok',
+       self.bcancel   - кнопка 'Відмінити'
+    '''
 
-                <li ><a href="/">Головна</a></li>
-                <li >
-                    <a href='#' class="dropdown-toggle" id="department-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="cursor:pointer;">
-                        Матеріали
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                        <li class="dropdown-submenu"><a href="/pages/1" >Кафедра</a>
-<ul class="dropdown-menu" >
-    <li ><a href="/pages/3" >Історична довідка</a>
-</li>
-<li ><a href="/pages/8" >Г. М. Положій - 100 років від дня народженя</a>
-</li>
-<li ><a href="/pages/6" >Навчальний процес</a>
-</li>
-<li ><a href="/pages/4" >Навчально-методичні публікації</a>
-</li>
-<li ><a href="/pages/5" >Наукова діяльність</a>
-</li>
-<li ><a href="/pages/7" >Науковий семінар</a>
-</li>
-</ul></li>
-<li class="dropdown-submenu"><a href="/pages/2" >Студенту</a>
-<ul class="dropdown-menu" >
-    <li class="dropdown-submenu"><a href="/pages/12" >Навчальні матеріали</a>
-<ul class="dropdown-menu" >
-    <li class="dropdown-submenu"><a href="/pages/13" >Python</a>
-<ul class="dropdown-menu" >
-    <li ><a href="/pages/15" >Тема 1. Лінійні програми</a>
-</li>
-<li ><a href="/pages/16" >Тема 2. Розгалужені програми</a>
-</li>
-<li ><a href="/pages/17" >Тема 3. Циклічні програми</a>
-</li>
-<li ><a href="/pages/18" >Тема 4. Числові типи даних</a>
-</li>
-<li ><a href="/pages/20" >Тема 5. Рядки</a>
-</li>
-<li ><a href="/pages/21" >Тема 6. Списки</a>
-</li>
-<li ><a href="/pages/22" >Тема 7. Кортежі</a>
-</li>
-<li ><a href="/pages/24" >Тема 8. Словники</a>
-</li>
-<li ><a href="/pages/25" >Тема 9. Підпрограми</a>
-</li>
-<li ><a href="/pages/26" >Тема 10. Модулі та пакети</a>
-</li>
-<li ><a href="/pages/27" >Тема 11. Множини</a>
-</li>
-<li ><a href="/pages/28" >Тема 12. Файли</a>
-</li>
-<li ><a href="/pages/29" >Тема 13. Класи та об’єкти</a>
-</li>
-<li ><a href="/pages/30" >Тема 14. Рекурсивні структури даних/Наслідування та агрегація</a>
-</li>
-<li ><a href="/pages/31" >Тема 15. Обробка помилок та виключних ситуацій</a>
-</li>
-<li ><a href="/pages/32" >Тема 16. Ітератори та генератори</a>
-</li>
-<li ><a href="/pages/33" >Тема 17. Декоратори</a>
-</li>
-<li ><a href="/pages/34" >Тема 18. Множинне наслідування</a>
-</li>
-<li ><a href="/pages/35" >Тема 19. Метакласи та метапрограмування</a>
-</li>
-<li ><a href="/pages/36" >Тема 20. Наукові обчислення / Графічний інтерфейс</a>
-</li>
-<li ><a href="/pages/37" >Тема 21. Регулярні вирази</a>
-</li>
-<li ><a href="/pages/38" >Тема 22. Використання операційної системи</a>
-</li>
-<li ><a href="/pages/39" >Тема 23. Робота з даними у офісних документах</a>
-</li>
-<li ><a href="/pages/40" >Тема 24. Графічний інтерфейс</a>
-</li>
-<li ><a href="/pages/41" >Тема 25. Загальна будова глобальних мереж</a>
-</li>
-<li ><a href="/pages/42" >Тема 26. Побудова веб-клієнтів</a>
-</li>
-<li ><a href="/pages/43" >Тема 27. Побудова веб-серверів</a>
-</li>
-<li ><a href="/pages/44" >Тема 28. XML та JSON</a>
-</li>
-<li ><a href="/pages/46" >Тема 29. Використання баз даних</a>
-</li>
-<li ><a href="/pages/47" >Тема 30. Тестування. Розповсюдження власних застосувань</a>
-</li>
-<li ><a href="/pages/45" >Програмні проекти для студентів 2 курсу</a>
-</li>
-<li ><a href="/pages/19" >Звідки завантажити</a>
-</li>
-<li class="dropdown-submenu"><a href="/pages/48" >Прикладне програмування, комп'ютерна математика</a>
-<ul class="dropdown-menu" >
-    <li ><a href="/pages/49" >Тема 1. Регулярні вирази</a>
-</li>
-<li ><a href="/pages/50" >Тема 2. Використання операційної системи</a>
-</li>
-<li ><a href="/pages/51" >Тема 3. Робота з даними у офісних документах</a>
-</li>
-<li ><a href="/pages/52" >Тема 4. Паралельні обчислення</a>
-</li>
-<li ><a href="/pages/53" >Тема 5. Загальна будова глобальних мереж</a>
-</li>
-<li ><a href="/pages/54" >Тема 6. Побудова веб-клієнтів</a>
-</li>
-<li ><a href="/pages/55" >Тема 7. Побудова веб-серверів</a>
-</li>
-<li ><a href="/pages/56" >Тема 8. Використання баз даних</a>
-</li>
-</ul></li>
-<li ><a href="/pages/23" >Список літератури</a>
-</li>
-<li ><a href="/pages/57" >Управління проектами, комп'ютерна математика</a>
-</li>
-</ul></li>
-<li ><a href="/pages/14" >Інше</a>
-</li>
-</ul></li>
-<li ><a href="/pages/10" >Розклад занять викладачів</a>
-</li>
-<li ><a href="/pages/11" >Розклад консультацій викладачів</a>
-</li>
-<li ><a href="/pages/9" >Теми курсових і дипломних робіт</a>
-</li>
-</ul></li>
-                    </ul>
-                </li>
+    def __init__(self, master, initdir=None):
+        self.top = master
 
+        self.oldcwd = os.getcwd()
+        self.result = ''
+        # визначаємо початковий каталог
+        if not initdir or not os.path.exists(initdir):
+            self.cwd = os.curdir
+        else:
+            self.cwd = initdir
+        # створюємо елементи
+        self._make_widgets()
 
-<!--                {{ render(controller('AppBundle:Page:DropDown')) }}-->
-                <li ><a href="/department">Персоналії</a></li>
-                <li ><a href="/photo-gallery">Галерея</a></li>
-                <li ><a href="/books">Бібліотека</a></li>
-                <li ><a href="/contact-us">Контакти</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
+        self.doLS()
 
-<div class="container">
-    <ol class="breadcrumb no-margin">
-    <li><a href="/">Головна</a></li>
-    <li class="active">Помилка</li>
-</ol>
-<div class="container">
-    <br/>
-    <h2 align="center">Отакої :(</h2><br/>
-    <div class="alert alert-danger" role="alert" align="center">
-        <h3>404 : Сторінку не знайдено </h3>
-        <h4></h4>
-    </div>
-</div>
+    def _make_widgets(self):
+        '''Створити елементи для вибору каталогу.
+        '''
+        # рамка та надпис з ім'ям каталогу
+        self.dirfl = Frame(self.top)
+        self.dirl = Label(self.dirfl, 
+                font=('Helvetica', 12, 'bold'))
+        self.dirl.pack(side=LEFT, fill=X)
+        self.dirfl.pack(side=TOP, fill=X, expand=YES)
 
-</div>
+        # рамка, список та лінійка прокрутки
+        self.dirfm = Frame(self.top)
+        self.dirsb = Scrollbar(self.dirfm)
+        self.dirsb.pack(side=RIGHT, fill=Y)
+        self.dirs = Listbox(self.dirfm, height=15,
+                    width=50, yscrollcommand=self.dirsb.set)
+        self.dirsb.config(command=self.dirs.yview)
+        self.dirs.pack(side=RIGHT, fill=BOTH, expand=YES)
+        self.dirfm.pack(side=TOP, fill=BOTH, expand=YES)
+        # зв'язати подвійне натиснення лівої клавіші миші
+        # з функцією обробки self.setDirAndGo
+        self.dirs.bind('<Double-1>', self.setDirAndGo)
 
-<br/><br/>
+        # рамка та кнопки
+        self.bfm = Frame(self.top)
+        self.bok = Button(self.bfm, text='Ok',
+                        command=self.ok_handler)
+        self.bcancel = Button(self.bfm,
+                        text='Відмінити',
+                        command=self.cancel_handler)
+        self.bcancel.pack(side=RIGHT, padx=5, pady=5)
+        self.bok.pack(side=RIGHT, padx=5, pady=5)
+        self.bfm.pack(fill=X, expand=YES)
+        self.dirs.config(selectbackground='LightSkyBlue')
+        
 
-<div id="footer">
-    <div class="container">
-        <div class="col-md-8">
-            Київський національний університет імені Тараса Шевченка <br/>
-            Механіко-математичний факультет <br/>
-            Кафедра математичної фізики <br> <br/>
-            Київ, Україна <br>
-            2015 © Всі права захищено
-        </div>
-        <div class="col-md-4">
-            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="/contact-us">Зворотній зв'язок</a> <br/>
-<!--            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="/login">Вхід адміністратора</a>-->
+    def setDirAndGo(self, ev=None):
+        '''Обробити подвійне натиснення лівої клавіші миші.'''
+        temp = self.cwd # запам'ятати поточний каталог
+        try:
+            # отримати вибраний елемент списку
+            check = self.dirs.get(self.dirs.curselection())
+            if not check:
+                check = os.curdir
+            self.cwd = check
+            # оновити список каталогів
+            self.doLS()
+        except TclError:
+            # пропустити помилку curselection, якщо під час
+            # подвійного натиснення лівої клавіші миші список порожній
+            pass
+        except Exception as e:
+            # якщо інша помилка, то видати повідомлення
+            showwarning('Помилка', e)
+            self.cwd = temp             # відновити поточний каталог
+            
+    def _isroot(self, directory):
+        '''Перевірити, чи є поточний каталог кореневим на диску.'''
+        if sys.platform.startswith('win'):
+            # якщо windows
+            isroot = directory.endswith(':\\')
+        else:
+            # якщо unix, linux, mac os
+            isroot = directory == '/'
+        return isroot
 
-        </div>
+    def _getdriveslist(self):
+        '''Повернути список дисків (точок монтування).'''
+        if sys.platform.startswith('win'):
+            # якщо windows
+            driveslist = [chr(i) + ":\\" for i in range(ord('A'),ord('Z') + 1)
+                                if os.path.exists(chr(i) + ":\\")]
+        elif sys.platform.startswith('darwin'):
+            # якщо mac os
+            driveslist = os.listdir('/volumes')
+        else:
+            # якщо unix, linux
+            driveslist = os.listdir('/mnt')
+        return driveslist
+                          
+    def doLS(self):
+        '''Оновити список каталогів.'''
+        
+        if self.cwd == os.pardir and self._isroot(self.result):
+            # якщо поточний каталог кореневий, сформувати список дисків
+            self.dirs.delete(0, END)            # очистити список на екрані
+            self.top.update()                   # оновити зображення
+            dirlist = self._getdriveslist()
+            self.cwd = ''
+            # запам'ятати результат вибору
+            self.result = ''
+        else:
+            # інакше сформувати список підкаталогів поточного каталогу 
+            dirlist = []
+            for d in os.listdir(self.cwd):
+                fullitem = os.path.join(self.cwd, d)
+                if os.path.isdir(fullitem):
+                    dirlist.append(d)
+            dirlist.sort()
+            os.chdir(self.cwd)  # змінити поточний каталог
+            # запам'ятати результат вибору
+            self.result = os.getcwd()
+            self.dirs.delete(0, END)            # очистити список на екрані
 
-    </div>
-</div>
+        # відобразити змінений каталог у надписі
+        self.dirl.config(text=self.result)
+        # змінити вміст списку
+        if self.cwd:                 # якщо список - це не список дисків
+            self.dirs.insert(END, os.curdir)    # вставити поточний каталог (.)
+            self.dirs.insert(END, os.pardir)    # вставити батьківський каталог (..)
+            self.cwd = os.curdir
+        # вставити підкатлоги поточного або диски
+        for eachDir in dirlist:
+            self.dirs.insert(END, eachDir)
+
+    def ok_handler(self, ev=None):
+        '''Обробити натиснення кнопки "Ok".'''
+        os.chdir(self.oldcwd)# повернутися до колишнього поточного каталогу
+        self.top.destroy()   # закрити вікно self.top
+        
+    def cancel_handler(self, ev=None):
+        '''Обробити натиснення кнопки "Відмінити".'''
+        # відмінити усі зміни
+        self.result = ''
+        self.ok_handler(ev)
+
+    def get(self):
+        '''Повернути вибраний каталог.
+
+           Якщо каталог не вибрано, то повертається порожній рядок.
+        '''
+        return self.result
 
 
+def main():
+    '''Функція для тестування.
 
+       Працює, коли модуль є головним
+    '''
+    top = Tk()
+    d = DirSelector(top, os.curdir)
+    mainloop()
+    sel = d.get()
+    print(sel)
 
-
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/assets/bs/js/bootstrap.min.js"></script>
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-19922701-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
-
-</body>
-</html>
-
+if __name__ == '__main__':
+    main()

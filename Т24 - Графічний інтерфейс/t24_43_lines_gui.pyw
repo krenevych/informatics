@@ -1,245 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Кафедра математичної фізики</title>
-    <meta name="description" content="Офіційний сайт кафедри математичної фізики. Механіко-математичний факультет. Київський національний університет імені Тараса Шевченка">
-
-    <!-- Bootstrap -->
-    <link href="/assets/bs/css/bootstrap.css" rel="stylesheet">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="/assets/js/jquery.min.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="/assets/css/extra.css">
-</head>
-<body>
-<div class="container" align="center">
-    <br/>
-    <a href="http://univ.kiev.ua/" target="_blank">Київський національний університет імені Тараса Шевченка</a> <br>
-    <a href="http://mechmat.univ.kiev.ua/" target="_blank">Механіко-математичний факультет</a>
-
-    <h1 style="color:#444;font-weight: bold">КАФЕДРА МАТЕМАТИЧНОЇ ФІЗИКИ</h1>
-</div>
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" style="width:90%" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                Головне меню
-            </button>
-<!--            {#<a class="navbar-brand" href="#">Project name</a>#}-->
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-
-                <li ><a href="/">Головна</a></li>
-                <li >
-                    <a href='#' class="dropdown-toggle" id="department-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="cursor:pointer;">
-                        Матеріали
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                        <li class="dropdown-submenu"><a href="/pages/1" >Кафедра</a>
-<ul class="dropdown-menu" >
-    <li ><a href="/pages/3" >Історична довідка</a>
-</li>
-<li ><a href="/pages/8" >Г. М. Положій - 100 років від дня народженя</a>
-</li>
-<li ><a href="/pages/6" >Навчальний процес</a>
-</li>
-<li ><a href="/pages/4" >Навчально-методичні публікації</a>
-</li>
-<li ><a href="/pages/5" >Наукова діяльність</a>
-</li>
-<li ><a href="/pages/7" >Науковий семінар</a>
-</li>
-</ul></li>
-<li class="dropdown-submenu"><a href="/pages/2" >Студенту</a>
-<ul class="dropdown-menu" >
-    <li class="dropdown-submenu"><a href="/pages/12" >Навчальні матеріали</a>
-<ul class="dropdown-menu" >
-    <li class="dropdown-submenu"><a href="/pages/13" >Python</a>
-<ul class="dropdown-menu" >
-    <li ><a href="/pages/15" >Тема 1. Лінійні програми</a>
-</li>
-<li ><a href="/pages/16" >Тема 2. Розгалужені програми</a>
-</li>
-<li ><a href="/pages/17" >Тема 3. Циклічні програми</a>
-</li>
-<li ><a href="/pages/18" >Тема 4. Числові типи даних</a>
-</li>
-<li ><a href="/pages/20" >Тема 5. Рядки</a>
-</li>
-<li ><a href="/pages/21" >Тема 6. Списки</a>
-</li>
-<li ><a href="/pages/22" >Тема 7. Кортежі</a>
-</li>
-<li ><a href="/pages/24" >Тема 8. Словники</a>
-</li>
-<li ><a href="/pages/25" >Тема 9. Підпрограми</a>
-</li>
-<li ><a href="/pages/26" >Тема 10. Модулі та пакети</a>
-</li>
-<li ><a href="/pages/27" >Тема 11. Множини</a>
-</li>
-<li ><a href="/pages/28" >Тема 12. Файли</a>
-</li>
-<li ><a href="/pages/29" >Тема 13. Класи та об’єкти</a>
-</li>
-<li ><a href="/pages/30" >Тема 14. Рекурсивні структури даних/Наслідування та агрегація</a>
-</li>
-<li ><a href="/pages/31" >Тема 15. Обробка помилок та виключних ситуацій</a>
-</li>
-<li ><a href="/pages/32" >Тема 16. Ітератори та генератори</a>
-</li>
-<li ><a href="/pages/33" >Тема 17. Декоратори</a>
-</li>
-<li ><a href="/pages/34" >Тема 18. Множинне наслідування</a>
-</li>
-<li ><a href="/pages/35" >Тема 19. Метакласи та метапрограмування</a>
-</li>
-<li ><a href="/pages/36" >Тема 20. Наукові обчислення / Графічний інтерфейс</a>
-</li>
-<li ><a href="/pages/37" >Тема 21. Регулярні вирази</a>
-</li>
-<li ><a href="/pages/38" >Тема 22. Використання операційної системи</a>
-</li>
-<li ><a href="/pages/39" >Тема 23. Робота з даними у офісних документах</a>
-</li>
-<li ><a href="/pages/40" >Тема 24. Графічний інтерфейс</a>
-</li>
-<li ><a href="/pages/41" >Тема 25. Загальна будова глобальних мереж</a>
-</li>
-<li ><a href="/pages/42" >Тема 26. Побудова веб-клієнтів</a>
-</li>
-<li ><a href="/pages/43" >Тема 27. Побудова веб-серверів</a>
-</li>
-<li ><a href="/pages/44" >Тема 28. XML та JSON</a>
-</li>
-<li ><a href="/pages/46" >Тема 29. Використання баз даних</a>
-</li>
-<li ><a href="/pages/47" >Тема 30. Тестування. Розповсюдження власних застосувань</a>
-</li>
-<li ><a href="/pages/45" >Програмні проекти для студентів 2 курсу</a>
-</li>
-<li ><a href="/pages/19" >Звідки завантажити</a>
-</li>
-<li class="dropdown-submenu"><a href="/pages/48" >Прикладне програмування, комп'ютерна математика</a>
-<ul class="dropdown-menu" >
-    <li ><a href="/pages/49" >Тема 1. Регулярні вирази</a>
-</li>
-<li ><a href="/pages/50" >Тема 2. Використання операційної системи</a>
-</li>
-<li ><a href="/pages/51" >Тема 3. Робота з даними у офісних документах</a>
-</li>
-<li ><a href="/pages/52" >Тема 4. Паралельні обчислення</a>
-</li>
-<li ><a href="/pages/53" >Тема 5. Загальна будова глобальних мереж</a>
-</li>
-<li ><a href="/pages/54" >Тема 6. Побудова веб-клієнтів</a>
-</li>
-<li ><a href="/pages/55" >Тема 7. Побудова веб-серверів</a>
-</li>
-<li ><a href="/pages/56" >Тема 8. Використання баз даних</a>
-</li>
-</ul></li>
-<li ><a href="/pages/23" >Список літератури</a>
-</li>
-<li ><a href="/pages/57" >Управління проектами, комп'ютерна математика</a>
-</li>
-</ul></li>
-<li ><a href="/pages/14" >Інше</a>
-</li>
-</ul></li>
-<li ><a href="/pages/10" >Розклад занять викладачів</a>
-</li>
-<li ><a href="/pages/11" >Розклад консультацій викладачів</a>
-</li>
-<li ><a href="/pages/9" >Теми курсових і дипломних робіт</a>
-</li>
-</ul></li>
-                    </ul>
-                </li>
+#t24_43
+# Клас для зображення інтерфейсу а також для гри у Lines
 
 
-<!--                {{ render(controller('AppBundle:Page:DropDown')) }}-->
-                <li ><a href="/department">Персоналії</a></li>
-                <li ><a href="/photo-gallery">Галерея</a></li>
-                <li ><a href="/books">Бібліотека</a></li>
-                <li ><a href="/contact-us">Контакти</a></li>
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
-
-<div class="container">
-    <ol class="breadcrumb no-margin">
-    <li><a href="/">Головна</a></li>
-    <li class="active">Помилка</li>
-</ol>
-<div class="container">
-    <br/>
-    <h2 align="center">Отакої :(</h2><br/>
-    <div class="alert alert-danger" role="alert" align="center">
-        <h3>404 : Сторінку не знайдено </h3>
-        <h4></h4>
-    </div>
-</div>
-
-</div>
-
-<br/><br/>
-
-<div id="footer">
-    <div class="container">
-        <div class="col-md-8">
-            Київський національний університет імені Тараса Шевченка <br/>
-            Механіко-математичний факультет <br/>
-            Кафедра математичної фізики <br> <br/>
-            Київ, Україна <br>
-            2015 © Всі права захищено
-        </div>
-        <div class="col-md-4">
-            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="/contact-us">Зворотній зв'язок</a> <br/>
-<!--            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="/login">Вхід адміністратора</a>-->
-
-        </div>
-
-    </div>
-</div>
+from tkinter import *
+from tkinter.messagebox import *
+from t24_41_grid_canvas import *
+from t24_42_lines import *
 
 
 
+# стани
+COMPUTER_MOVE = 0   # хід комп'ютера
+USER_MOVE = 1       # хід гравця (до вибору кулі)
+SELECTED = 2        # хід гравця (після вибору кулі)
+
+class LinesGUI:
+    '''Клас для зміни параметрів збереження (backup).
+
+       self.top - вікно верхнього рівня у якому розміщено елементи
+       self.rows - кількість рядків
+       self.cols - кількість стовпчиків
+       self.empty - кількість порожніх клітинок на полі
+       self.lines - об'єкт класу Lines - містить методи, що підтримують гру
+       self.state - стан: хід комп'ютера, хід користувача або вибрано
+                    клітинку для переміщення
+       self.selrow - рядок вибраної клітинки
+       self.selcol - стовпчик вибраної клітинки
+
+       self.gc - об'єкт класу GridCanvas - поле з клітинками
+       self.little_gc - поле з 3 клітинок для показу наступних кольорів
+       self.score - ціла змінна для збереження та відображення рахунку
+    '''
+
+    def __init__(self):
+        self.top = Tk()
+        self.rows = 9
+        self.cols = 9
+        self.state = COMPUTER_MOVE
+        
+        # створюємо елементи
+        self._make_widgets()
+        # розмістити перші три кулі
+        self._start_game()
+
+        mainloop()
 
 
+    def _make_widgets(self):
+        '''Створити елементи інтерфейсу Lines.
+        '''
+        # заголовок вікна
+        self.top.title('Lines')
+        # поле у клітинку
+        self.gc = GridCanvas(self.top, self.rows, self.cols,
+                        self.sel_handler,
+                        width=450, height=450,
+                        bordercolor = 'grey', evenbg = '',
+                        highlightbg = 'light grey',
+                        bg='dark slate grey', bd=2)
+        self.gc.pack(side=LEFT)
+        # рамка для елементів управління: рахунок, кнопка нової гри
+        fcntrls = Frame(self.top)
+        # маленьке поле у клітинку
+        self.little_gc = GridCanvas(fcntrls, 1, 3,
+                        self.dummy_sel_handler,
+                        width=120, height=40,
+                        ratio = 0.5,
+                        bordercolor = 'grey', evenbg = '',
+                        highlightbg = 'light grey',
+                        bg='dark slate grey', bd=2)
+        self.little_gc.pack(side=TOP, padx=5, pady=5)
+        Label(fcntrls, text='Рахунок').pack(side=TOP, fill=X,
+                                            padx=5, pady=5)
+        self.score = IntVar()
+        escore = Entry(fcntrls, textvariable=self.score,
+                            width = 5,
+                            state = 'readonly',
+                            fg = 'navy',
+                            font = ("arial", 16, 'bold'))
+        escore.pack(side=TOP, padx=5, pady=5)
+        Button(fcntrls, text='Нова гра',
+               command=self.newgame_handler).pack(side=TOP,
+                                         fill=X, padx=5, pady=5)
+        fcntrls.pack(side=LEFT, fill=BOTH)
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/assets/bs/js/bootstrap.min.js"></script>
+    def _start_game(self):
+        '''Почати нову гру.'''
+        self.empty = self.rows*self.cols
+        self.selrow = self.selcol = None
+        self.lines = Lines()
+        self.score.set(0)
+        self.computer_move()
+
+    def move_path(self, path):
+        '''Перемістити кулю вздовж шляху path.
+
+           path - список клітинок (row, col)
+        '''
+        fromrow, fromcol = path[0]
+        for i in range(1, len(path)):
+            torow, tocol = path[i]
+            self.gc.move_bound(fromrow, fromcol, torow, tocol, slow=True)
+            fromrow, fromcol = torow, tocol
+
+    def clear(self):
+        '''Очистити кульки з 5 або більше підряд.'''
+        # отримати список клітинок для очищення та додавання до рахунку
+        to_clear, addscore = self.lines.clear(self.gc.grid)
+        # змінити рахунок
+        self.score.set(self.score.get() + addscore)
+        cleared = len(to_clear) # кількість клітинок для очищення
+        self.empty += cleared
+        # очистити клітинки
+        for row, col in to_clear:
+            self.gc.delete_bound(row, col)
+        return cleared
+        
+    def show_next_colors(self):
+        '''Показати кольори кульок для наступного кроку.'''
+        grid = self.little_gc.grid
+        num = min(3, self.empty)
+        for col in range(3):
+            self.little_gc.delete_bound(0, col)
+        for col in range(num):
+            color = self.lines.cl[col]
+            self.little_gc.create_bound(0, col, BoundOval(),
+                                 fill=color, outline=color)
+        
+
+    def computer_move(self):
+        '''Розмістити нові кульки та перевірити, чи закінчилась гра.'''
+        # отримати нові кулі разом з кольорами
+        new_spheres = self.lines.get_spheres(self.gc.grid)
+        # розмістити кулі на полі
+        for row, col in new_spheres.keys():
+            color = new_spheres[(row, col)]
+            self.gc.create_bound(row, col, BoundOval(),
+                                 fill=color, outline=color)
+        self.empty -= len(new_spheres) # оновити кількість порожніх клітинок
+        # спробувати очистити після ходу комп'ютера
+        cleared = self.clear()
+        if self.empty == 0:
+            showinfo('Кінець гри',
+                'Гру закінчено! рахунок: {}'.format(self.score.get()))
+        else:
+            # показати наступні кольори
+            self.show_next_colors()
+            # очікувати хід користувача
+            self.state = USER_MOVE
+
+    def sel_handler(self, gc, row, col):
+        '''Обробити вибір клітинки.'''
+        if self.state != COMPUTER_MOVE:
+            if self.state == SELECTED: # якщо вибрано клітинку
+                # отримати зв'язаний об'єкт
+                bo = self.gc.grid[row][col]
+                if not bo: # якщо клітинка порожня
+                    # отримати шлях від раніше вибраної клітинки до даної
+                    path = self.lines.get_path(self.gc.grid,
+                                self.selrow, self.selcol, row, col)
+                    if path: # якщо є шлях
+                        self.state = COMPUTER_MOVE
+                        self.gc.deselect_cell(self.selrow, self.selcol)
+                        self.move_path(path) # перемістити кулю вздовж шляху 
+                        cleared = self.clear() # очистити, якщо можливо
+                        if not cleared:
+                            self.computer_move() # хід комп'ютера
+                        else:
+                            self.state = USER_MOVE # очікувати хід користувача
+                    else: # немає шляху - дзвінок
+                        self.top.bell()
+                else: # якщо клітинка не порожня
+                    # зробити цю клітинку вибраною
+                    self.gc.deselect_cell(self.selrow, self.selcol)
+                    self.selrow = row
+                    self.selcol = col
+                    self.gc.select_cell(row, col)
+            else: # якщо хід користувача та не вибрано клітинку
+                bo = self.gc.grid[row][col]
+                if bo: # якщо клітинка не порожня
+                    # вибрати її
+                    self.selrow = row
+                    self.selcol = col
+                    self.gc.select_cell(row, col)
+                    self.state = SELECTED
+
+    def dummy_sel_handler(self, gc, row, col):
+        '''Ігнорувати вибір клітинки поля.'''
+        pass        
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    def newgame_handler(self, ev=None):
+        '''Обробити натиснення кнопки "Нова гра".'''
+        # очистити поле
+        for row in range(self.rows):
+            for col in range(self.cols):
+                self.gc.delete_bound(row, col)
+        if self.selrow != None:
+            self.gc.deselect_cell(self.selrow, self.selcol)
+        self.state = COMPUTER_MOVE
+        # почати нову гру
+        self._start_game()
+        
 
-  ga('create', 'UA-19922701-2', 'auto');
-  ga('send', 'pageview');
 
-</script>
-
-
-
-</body>
-</html>
-
+if __name__ == '__main__':
+    lg = LinesGUI()
